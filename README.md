@@ -2,7 +2,7 @@
 A live streaming app for the Stonks iOS interview
 
 **Specification Summary:** 
-- Native Application (Xcode, Swift or Objective C)
+- Native Application (Choosing Xcode and Swift)
 - Stream from (mux.com) [https://docs.mux.com/guides/video/start-live-streaming], no broadcasting necessary. 
 - Screen 1 (Home) 
   - keep live stream view fixed at top. 
