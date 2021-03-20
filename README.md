@@ -86,3 +86,9 @@ Letting the Streaming player keep its same view allows us to avoid the problem o
 
 - Since the text is disconnected and random, I have a temptation to reflect that in the models, which would demonstrate adherance to the specifications but wouldn't demonstrate an understanding of modeling and structures.  I think I am going to opt for adherance to the specifications in favor of demonstrating something for the sake of demonstrating something. 
  
+
+# Process #
+1. Create the inanimate UI for the two View Controllers and a tab view. 
+2. Implement the animation for the stream view from HomeViewController to DetailViewController. 
+3. Implement the streaming. 
+4. Add an AVPlayer as a subView to the moving view. 
