@@ -93,17 +93,3 @@ Letting the Streaming player keep its same view allows us to avoid the problem o
 3. Implement the streaming. 
 4. Add an AVPlayer as a subView to the moving view.
 
-
-# Issue #
-- The specifications have what appears to be a UITabBarController, however the TabBarItems do not have an image.  
-Work arrounds: 
-  - Hard code the offset to be -10 to shift the text to center.  Downsides: If the text size changes for future requirements or for accessibility low vision reasons, then the text will no longer be centered.  Maybe there is a hacky way around this by dynamically setting the offset based on the size and font of the text, or manually identifying the center of the text. 
-  - Custom tab bar controller.  Downsides: adds bloat as ViewController children need to be explicitly managed, tested and resolve edge cases. Recreating the wheel. 
-  - Investigate reusse with a qualified framework.  Not finding...
-
-*Choice* - For a one time use project, with no intention of future expansion, I think it is okay to shift the text by -10 to make it centered. Also note that there is a need for a more customizeable tab bar.  Perhaps it can be created as a Swift Package or Cocoapod. 
-
-
-
-
-
