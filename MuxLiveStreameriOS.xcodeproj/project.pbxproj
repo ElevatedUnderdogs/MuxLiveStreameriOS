@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A22606CB3200074D6A /* AppDelegate.swift */; };
 		755BF5A52606CB3200074D6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A42606CB3200074D6A /* SceneDelegate.swift */; };
-		755BF5A72606CB3200074D6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A62606CB3200074D6A /* ViewController.swift */; };
+		755BF5A72606CB3200074D6A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A62606CB3200074D6A /* TabViewController.swift */; };
 		755BF5AA2606CB3200074D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755BF5A82606CB3200074D6A /* Main.storyboard */; };
 		755BF5AC2606CB3300074D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755BF5AB2606CB3300074D6A /* Assets.xcassets */; };
 		755BF5AF2606CB3300074D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755BF5AD2606CB3300074D6A /* LaunchScreen.storyboard */; };
 		755BF5BA2606CB3300074D6A /* MuxLiveStreameriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5B92606CB3300074D6A /* MuxLiveStreameriOSTests.swift */; };
 		755BF5C52606CB3300074D6A /* MuxLiveStreameriOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5C42606CB3300074D6A /* MuxLiveStreameriOSUITests.swift */; };
+		755BF5D626079D9900074D6A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5D526079D9900074D6A /* HomeViewController.swift */; };
+		755BF5DB26079E9F00074D6A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5DA26079E9F00074D6A /* DetailsViewController.swift */; };
+		756103152607B86D006EBF2B /* UITabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756103142607B86D006EBF2B /* UITabBarItem.swift */; };
+		7561031A260830E9006EBF2B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75610319260830E9006EBF2B /* UIColor.swift */; };
+		7561031F26094C3A006EBF2B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7561031E26094C3A006EBF2B /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 		755BF59F2606CB3200074D6A /* MuxLiveStreameriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuxLiveStreameriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		755BF5A22606CB3200074D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		755BF5A42606CB3200074D6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		755BF5A62606CB3200074D6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		755BF5A62606CB3200074D6A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		755BF5A92606CB3200074D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		755BF5AB2606CB3300074D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		755BF5AE2606CB3300074D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		755BF5C02606CB3300074D6A /* MuxLiveStreameriOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxLiveStreameriOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		755BF5C42606CB3300074D6A /* MuxLiveStreameriOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxLiveStreameriOSUITests.swift; sourceTree = "<group>"; };
 		755BF5C62606CB3300074D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755BF5D526079D9900074D6A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		755BF5DA26079E9F00074D6A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		756103142607B86D006EBF2B /* UITabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarItem.swift; sourceTree = "<group>"; };
+		75610319260830E9006EBF2B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		7561031E26094C3A006EBF2B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +111,12 @@
 			children = (
 				755BF5A22606CB3200074D6A /* AppDelegate.swift */,
 				755BF5A42606CB3200074D6A /* SceneDelegate.swift */,
-				755BF5A62606CB3200074D6A /* ViewController.swift */,
+				755BF5A62606CB3200074D6A /* TabViewController.swift */,
+				755BF5D526079D9900074D6A /* HomeViewController.swift */,
+				755BF5DA26079E9F00074D6A /* DetailsViewController.swift */,
+				756103142607B86D006EBF2B /* UITabBarItem.swift */,
+				75610319260830E9006EBF2B /* UIColor.swift */,
+				7561031E26094C3A006EBF2B /* String.swift */,
 				755BF5A82606CB3200074D6A /* Main.storyboard */,
 				755BF5AB2606CB3300074D6A /* Assets.xcassets */,
 				755BF5AD2606CB3300074D6A /* LaunchScreen.storyboard */,
@@ -258,9 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				755BF5A72606CB3200074D6A /* ViewController.swift in Sources */,
+				755BF5A72606CB3200074D6A /* TabViewController.swift in Sources */,
+				7561031A260830E9006EBF2B /* UIColor.swift in Sources */,
 				755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */,
+				756103152607B86D006EBF2B /* UITabBarItem.swift in Sources */,
 				755BF5A52606CB3200074D6A /* SceneDelegate.swift in Sources */,
+				755BF5D626079D9900074D6A /* HomeViewController.swift in Sources */,
+				7561031F26094C3A006EBF2B /* String.swift in Sources */,
+				755BF5DB26079E9F00074D6A /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
