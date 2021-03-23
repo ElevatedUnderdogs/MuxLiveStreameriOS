@@ -104,3 +104,4 @@ Letting the Streaming player keep its same view allows us to avoid the problem o
         - Or instead of using a Tab Bar, a navigation controller could be used. 
         - Or the view cna be passed as a payload to the other tab View.  We can simulate the movement, by capturing the frame and animating it up and down. 
 
+
