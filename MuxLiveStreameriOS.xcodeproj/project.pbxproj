@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		755B5AC52609A57F000C8FD4 /* AVPlayerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B5AC42609A57F000C8FD4 /* AVPlayerLayer.swift */; };
+		755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A22606CB3200074D6A /* AppDelegate.swift */; };
+		755BF5A52606CB3200074D6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A42606CB3200074D6A /* SceneDelegate.swift */; };
+		755BF5A72606CB3200074D6A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A62606CB3200074D6A /* TabViewController.swift */; };
+		755BF5AA2606CB3200074D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755BF5A82606CB3200074D6A /* Main.storyboard */; };
+		755BF5AC2606CB3300074D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755BF5AB2606CB3300074D6A /* Assets.xcassets */; };
+		755BF5AF2606CB3300074D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755BF5AD2606CB3300074D6A /* LaunchScreen.storyboard */; };
+		755BF5BA2606CB3300074D6A /* MuxLiveStreameriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5B92606CB3300074D6A /* MuxLiveStreameriOSTests.swift */; };
+		755BF5C52606CB3300074D6A /* MuxLiveStreameriOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5C42606CB3300074D6A /* MuxLiveStreameriOSUITests.swift */; };
+		755BF5D626079D9900074D6A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5D526079D9900074D6A /* HomeViewController.swift */; };
+		755BF5DB26079E9F00074D6A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5DA26079E9F00074D6A /* DetailsViewController.swift */; };
+		756103152607B86D006EBF2B /* UITabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756103142607B86D006EBF2B /* UITabBarItem.swift */; };
+		7561031A260830E9006EBF2B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75610319260830E9006EBF2B /* UIColor.swift */; };
+		7561031F26094C3A006EBF2B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7561031E26094C3A006EBF2B /* String.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		755BF5B62606CB3300074D6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 755BF5972606CB3200074D6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 755BF59E2606CB3200074D6A;
+			remoteInfo = MuxLiveStreameriOS;
+		};
+		755BF5C12606CB3300074D6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 755BF5972606CB3200074D6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 755BF59E2606CB3200074D6A;
+			remoteInfo = MuxLiveStreameriOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		755B5AC42609A57F000C8FD4 /* AVPlayerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerLayer.swift; sourceTree = "<group>"; };
+		755BF59F2606CB3200074D6A /* MuxLiveStreameriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuxLiveStreameriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		755BF5A22606CB3200074D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		755BF5A42606CB3200074D6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		755BF5A62606CB3200074D6A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		755BF5A92606CB3200074D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		755BF5AB2606CB3300074D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		755BF5AE2606CB3300074D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		755BF5B02606CB3300074D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755BF5B52606CB3300074D6A /* MuxLiveStreameriOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxLiveStreameriOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		755BF5B92606CB3300074D6A /* MuxLiveStreameriOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxLiveStreameriOSTests.swift; sourceTree = "<group>"; };
+		755BF5BB2606CB3300074D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755BF5C02606CB3300074D6A /* MuxLiveStreameriOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxLiveStreameriOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		755BF5C42606CB3300074D6A /* MuxLiveStreameriOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxLiveStreameriOSUITests.swift; sourceTree = "<group>"; };
+		755BF5C62606CB3300074D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755BF5D526079D9900074D6A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		755BF5DA26079E9F00074D6A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		756103142607B86D006EBF2B /* UITabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarItem.swift; sourceTree = "<group>"; };
+		75610319260830E9006EBF2B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		7561031E26094C3A006EBF2B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		755BF59C2606CB3200074D6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755BF5B22606CB3300074D6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755BF5BD2606CB3300074D6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		755BF5962606CB3200074D6A = {
+			isa = PBXGroup;
+			children = (
+				755BF5A12606CB3200074D6A /* MuxLiveStreameriOS */,
+				755BF5B82606CB3300074D6A /* MuxLiveStreameriOSTests */,
+				755BF5C32606CB3300074D6A /* MuxLiveStreameriOSUITests */,
+				755BF5A02606CB3200074D6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		755BF5A02606CB3200074D6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				755BF59F2606CB3200074D6A /* MuxLiveStreameriOS.app */,
+				755BF5B52606CB3300074D6A /* MuxLiveStreameriOSTests.xctest */,
+				755BF5C02606CB3300074D6A /* MuxLiveStreameriOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		755BF5A12606CB3200074D6A /* MuxLiveStreameriOS */ = {
+			isa = PBXGroup;
+			children = (
+				755BF5A22606CB3200074D6A /* AppDelegate.swift */,
+				755BF5A42606CB3200074D6A /* SceneDelegate.swift */,
+				755BF5A62606CB3200074D6A /* TabViewController.swift */,
+				755BF5D526079D9900074D6A /* HomeViewController.swift */,
+				755BF5DA26079E9F00074D6A /* DetailsViewController.swift */,
+				756103142607B86D006EBF2B /* UITabBarItem.swift */,
+				755B5AC42609A57F000C8FD4 /* AVPlayerLayer.swift */,
+				75610319260830E9006EBF2B /* UIColor.swift */,
+				7561031E26094C3A006EBF2B /* String.swift */,
+				755BF5A82606CB3200074D6A /* Main.storyboard */,
+				755BF5AB2606CB3300074D6A /* Assets.xcassets */,
+				755BF5AD2606CB3300074D6A /* LaunchScreen.storyboard */,
+				755BF5B02606CB3300074D6A /* Info.plist */,
+			);
+			path = MuxLiveStreameriOS;
+			sourceTree = "<group>";
+		};
+		755BF5B82606CB3300074D6A /* MuxLiveStreameriOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				755BF5B92606CB3300074D6A /* MuxLiveStreameriOSTests.swift */,
+				755BF5BB2606CB3300074D6A /* Info.plist */,
+			);
+			path = MuxLiveStreameriOSTests;
+			sourceTree = "<group>";
+		};
+		755BF5C32606CB3300074D6A /* MuxLiveStreameriOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				755BF5C42606CB3300074D6A /* MuxLiveStreameriOSUITests.swift */,
+				755BF5C62606CB3300074D6A /* Info.plist */,
+			);
+			path = MuxLiveStreameriOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		755BF59E2606CB3200074D6A /* MuxLiveStreameriOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755BF5C92606CB3300074D6A /* Build configuration list for PBXNativeTarget "MuxLiveStreameriOS" */;
+			buildPhases = (
+				755BF59B2606CB3200074D6A /* Sources */,
+				755BF59C2606CB3200074D6A /* Frameworks */,
+				755BF59D2606CB3200074D6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuxLiveStreameriOS;
+			productName = MuxLiveStreameriOS;
+			productReference = 755BF59F2606CB3200074D6A /* MuxLiveStreameriOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		755BF5B42606CB3300074D6A /* MuxLiveStreameriOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755BF5CC2606CB3300074D6A /* Build configuration list for PBXNativeTarget "MuxLiveStreameriOSTests" */;
+			buildPhases = (
+				755BF5B12606CB3300074D6A /* Sources */,
+				755BF5B22606CB3300074D6A /* Frameworks */,
+				755BF5B32606CB3300074D6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				755BF5B72606CB3300074D6A /* PBXTargetDependency */,
+			);
+			name = MuxLiveStreameriOSTests;
+			productName = MuxLiveStreameriOSTests;
+			productReference = 755BF5B52606CB3300074D6A /* MuxLiveStreameriOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		755BF5BF2606CB3300074D6A /* MuxLiveStreameriOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755BF5CF2606CB3300074D6A /* Build configuration list for PBXNativeTarget "MuxLiveStreameriOSUITests" */;
+			buildPhases = (
+				755BF5BC2606CB3300074D6A /* Sources */,
+				755BF5BD2606CB3300074D6A /* Frameworks */,
+				755BF5BE2606CB3300074D6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				755BF5C22606CB3300074D6A /* PBXTargetDependency */,
+			);
+			name = MuxLiveStreameriOSUITests;
+			productName = MuxLiveStreameriOSUITests;
+			productReference = 755BF5C02606CB3300074D6A /* MuxLiveStreameriOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		755BF5972606CB3200074D6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					755BF59E2606CB3200074D6A = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					755BF5B42606CB3300074D6A = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 755BF59E2606CB3200074D6A;
+					};
+					755BF5BF2606CB3300074D6A = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 755BF59E2606CB3200074D6A;
+					};
+				};
+			};
+			buildConfigurationList = 755BF59A2606CB3200074D6A /* Build configuration list for PBXProject "MuxLiveStreameriOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 755BF5962606CB3200074D6A;
+			productRefGroup = 755BF5A02606CB3200074D6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				755BF59E2606CB3200074D6A /* MuxLiveStreameriOS */,
+				755BF5B42606CB3300074D6A /* MuxLiveStreameriOSTests */,
+				755BF5BF2606CB3300074D6A /* MuxLiveStreameriOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		755BF59D2606CB3200074D6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755BF5AF2606CB3300074D6A /* LaunchScreen.storyboard in Resources */,
+				755BF5AC2606CB3300074D6A /* Assets.xcassets in Resources */,
+				755BF5AA2606CB3200074D6A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755BF5B32606CB3300074D6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755BF5BE2606CB3300074D6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		755BF59B2606CB3200074D6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755BF5A72606CB3200074D6A /* TabViewController.swift in Sources */,
+				7561031A260830E9006EBF2B /* UIColor.swift in Sources */,
+				755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */,
+				756103152607B86D006EBF2B /* UITabBarItem.swift in Sources */,
+				755BF5A52606CB3200074D6A /* SceneDelegate.swift in Sources */,
+				755B5AC52609A57F000C8FD4 /* AVPlayerLayer.swift in Sources */,
+				755BF5D626079D9900074D6A /* HomeViewController.swift in Sources */,
+				7561031F26094C3A006EBF2B /* String.swift in Sources */,
+				755BF5DB26079E9F00074D6A /* DetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755BF5B12606CB3300074D6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755BF5BA2606CB3300074D6A /* MuxLiveStreameriOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755BF5BC2606CB3300074D6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755BF5C52606CB3300074D6A /* MuxLiveStreameriOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		755BF5B72606CB3300074D6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 755BF59E2606CB3200074D6A /* MuxLiveStreameriOS */;
+			targetProxy = 755BF5B62606CB3300074D6A /* PBXContainerItemProxy */;
+		};
+		755BF5C22606CB3300074D6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 755BF59E2606CB3200074D6A /* MuxLiveStreameriOS */;
+			targetProxy = 755BF5C12606CB3300074D6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		755BF5A82606CB3200074D6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				755BF5A92606CB3200074D6A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		755BF5AD2606CB3300074D6A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				755BF5AE2606CB3300074D6A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		755BF5C72606CB3300074D6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		755BF5C82606CB3300074D6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		755BF5CA2606CB3300074D6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = MuxLiveStreameriOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ScottLydon.MuxLiveStreameriOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		755BF5CB2606CB3300074D6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = MuxLiveStreameriOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ScottLydon.MuxLiveStreameriOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		755BF5CD2606CB3300074D6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = MuxLiveStreameriOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ScottLydon.MuxLiveStreameriOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuxLiveStreameriOS.app/MuxLiveStreameriOS";
+			};
+			name = Debug;
+		};
+		755BF5CE2606CB3300074D6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = MuxLiveStreameriOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ScottLydon.MuxLiveStreameriOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuxLiveStreameriOS.app/MuxLiveStreameriOS";
+			};
+			name = Release;
+		};
+		755BF5D02606CB3300074D6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = MuxLiveStreameriOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ScottLydon.MuxLiveStreameriOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuxLiveStreameriOS;
+			};
+			name = Debug;
+		};
+		755BF5D12606CB3300074D6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L7Z3WU967;
+				INFOPLIST_FILE = MuxLiveStreameriOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ScottLydon.MuxLiveStreameriOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuxLiveStreameriOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		755BF59A2606CB3200074D6A /* Build configuration list for PBXProject "MuxLiveStreameriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755BF5C72606CB3300074D6A /* Debug */,
+				755BF5C82606CB3300074D6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		755BF5C92606CB3300074D6A /* Build configuration list for PBXNativeTarget "MuxLiveStreameriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755BF5CA2606CB3300074D6A /* Debug */,
+				755BF5CB2606CB3300074D6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		755BF5CC2606CB3300074D6A /* Build configuration list for PBXNativeTarget "MuxLiveStreameriOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755BF5CD2606CB3300074D6A /* Debug */,
+				755BF5CE2606CB3300074D6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		755BF5CF2606CB3300074D6A /* Build configuration list for PBXNativeTarget "MuxLiveStreameriOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755BF5D02606CB3300074D6A /* Debug */,
+				755BF5D12606CB3300074D6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 755BF5972606CB3200074D6A /* Project object */;
+}
