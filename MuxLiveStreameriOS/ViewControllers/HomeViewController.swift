@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
-        streamBackdrop.backgroundColor = .black
+        streamBackdrop.backgroundColor = UIColor(rgb: 0x2D2D2D)
         contentTable.backgroundColor = .black
         contentTable.dataSource = self
         contentTable.delegate = self
