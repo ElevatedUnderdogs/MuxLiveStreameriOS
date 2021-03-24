@@ -8,12 +8,16 @@
 import UIKit
 import AVKit
 
+var playerController: AVPlayerViewController!
+
 class HomeViewController: UIViewController {
     
     @IBOutlet var homeLabel: UILabel!
     @IBOutlet var streamBackdrop: UIView!
     @IBOutlet var contentTable: UITableView!
     let lorems: [String] = .init(repeating: .lorem, count: 4)
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +28,43 @@ class HomeViewController: UIViewController {
         contentTable.delegate = self
         contentTable.register(nib: "ContentTableViewCell")
         contentTable.adjust(headerHeight: 40)
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        play()
+    }
+}
+
+extension HomeViewController: AVPlayerViewControllerDelegate {
+
+    func playerViewController(_ playerViewController: AVPlayerViewController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void) {
+        if tabBarController?.currentViewController != playerController {
+            tabBarController?.currentViewController?.present(playerController, animated: true, completion: nil)
+        }
+    }
+
+    func play() {
         let player = AVPlayer(url: .muxStream())
+        playerController = AVPlayerViewController()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didfinishPlaying(notification:)),
+            name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+            object: player.currentItem
+        )
+        playerController.player = player
+        playerController.allowsPictureInPicturePlayback = true
+        playerController.delegate = self
+        playerController.player?.play()
+        present(playerController, animated: true, completion: nil)
+    }
+
+    @objc func didfinishPlaying(notification: NSNotification) {
+        playerController.dismiss(animated: true, completion: nil)
+        let alertView = UIAlertController(title: "Finished", message: "Video finished", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
     }
 }
 
