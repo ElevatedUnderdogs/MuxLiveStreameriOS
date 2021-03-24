@@ -30,6 +30,8 @@
 		756103152607B86D006EBF2B /* UITabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756103142607B86D006EBF2B /* UITabBarItem.swift */; };
 		7561031A260830E9006EBF2B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75610319260830E9006EBF2B /* UIColor.swift */; };
 		7561031F26094C3A006EBF2B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7561031E26094C3A006EBF2B /* String.swift */; };
+		75E6518E260BC97800B89B8D /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E6518D260BC97800B89B8D /* URL.swift */; };
+		75E65193260BD1C900B89B8D /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65192260BD1C900B89B8D /* UITabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		756103142607B86D006EBF2B /* UITabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarItem.swift; sourceTree = "<group>"; };
 		75610319260830E9006EBF2B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		7561031E26094C3A006EBF2B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		75E6518D260BC97800B89B8D /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		75E65192260BD1C900B89B8D /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 				7561031E26094C3A006EBF2B /* String.swift */,
 				753D52A6260AC7F600C46053 /* UIView.swift */,
 				753D52AB260AC80500C46053 /* NSObject.swift */,
+				75E6518D260BC97800B89B8D /* URL.swift */,
+				75E65192260BD1C900B89B8D /* UITabBarController.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -352,11 +358,13 @@
 				756103152607B86D006EBF2B /* UITabBarItem.swift in Sources */,
 				755BF5A52606CB3200074D6A /* SceneDelegate.swift in Sources */,
 				753D52AC260AC80500C46053 /* NSObject.swift in Sources */,
+				75E6518E260BC97800B89B8D /* URL.swift in Sources */,
 				755B5AC52609A57F000C8FD4 /* AVPlayerLayer.swift in Sources */,
 				755BF5D626079D9900074D6A /* HomeViewController.swift in Sources */,
 				752CA2FE260A681D00D558E0 /* UITableView.swift in Sources */,
 				7561031F26094C3A006EBF2B /* String.swift in Sources */,
 				752CA303260A684B00D558E0 /* UITableViewCell.swift in Sources */,
+				75E65193260BD1C900B89B8D /* UITabBarController.swift in Sources */,
 				755BF5DB26079E9F00074D6A /* DetailsViewController.swift in Sources */,
 				752CA311260A6F4500D558E0 /* ContentTableViewCell.swift in Sources */,
 				752CA337260A86EE00D558E0 /* HeaderView.swift in Sources */,
