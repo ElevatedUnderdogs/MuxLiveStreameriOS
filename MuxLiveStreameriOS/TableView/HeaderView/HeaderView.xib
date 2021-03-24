@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="MuxLiveStreameriOS" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="SNK-zA-LRu" id="nyW-ZE-4B9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNK-zA-LRu">
+                    <rect key="frame" x="10" y="10" width="394" height="876"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="SNK-zA-LRu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="RRd-Vs-AWi"/>
+                <constraint firstAttribute="trailing" secondItem="SNK-zA-LRu" secondAttribute="trailing" constant="10" id="Y4o-49-ZrN"/>
+                <constraint firstItem="SNK-zA-LRu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="gOo-xT-nRg"/>
+                <constraint firstAttribute="bottom" secondItem="SNK-zA-LRu" secondAttribute="bottom" constant="10" id="y3W-fa-OH6"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="74"/>
+        </view>
+    </objects>
+</document>

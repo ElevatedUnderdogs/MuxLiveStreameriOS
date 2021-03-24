@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentTableViewCell" rowHeight="214" id="WN9-nA-aBw" customClass="ContentTableViewCell" customModule="MuxLiveStreameriOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="214"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WN9-nA-aBw" id="wkX-fv-eXH">
+                <rect key="frame" x="0.0" y="0.0" width="303" height="214"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqu-rP-qAp">
+                        <rect key="frame" x="21" y="21" width="261" height="172"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Vqu-rP-qAp" secondAttribute="bottom" constant="10" id="5iA-3y-wDw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Vqu-rP-qAp" secondAttribute="trailing" constant="5" id="IdX-Ot-i8S"/>
+                    <constraint firstItem="Vqu-rP-qAp" firstAttribute="leading" secondItem="wkX-fv-eXH" secondAttribute="leadingMargin" constant="5" id="fPb-Fq-dKg"/>
+                    <constraint firstItem="Vqu-rP-qAp" firstAttribute="top" secondItem="wkX-fv-eXH" secondAttribute="topMargin" constant="10" id="xr1-ke-4K3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="fMt-sd-sq4"/>
+            <connections>
+                <outlet property="contentLabel" destination="Vqu-rP-qAp" id="fwe-Jm-5Hl"/>
+            </connections>
+            <point key="canvasLocation" x="125.36231884057972" y="154.6875"/>
+        </tableViewCell>
+    </objects>
+</document>
