@@ -17,7 +17,5 @@ class TabViewController: UITabBarController {
         tabBar.items?.setTextOnlyAttributes(fontSize: 20, color: .white)
         tabBar.barTintColor = .black
         tabBar.items?[1].title = "SCREEN2"
-
     }
-
 }

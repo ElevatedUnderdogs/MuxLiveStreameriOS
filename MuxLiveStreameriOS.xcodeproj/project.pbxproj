@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		752CA2FE260A681D00D558E0 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752CA2FD260A681D00D558E0 /* UITableView.swift */; };
+		752CA303260A684B00D558E0 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752CA302260A684B00D558E0 /* UITableViewCell.swift */; };
+		752CA311260A6F4500D558E0 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752CA30F260A6F4500D558E0 /* ContentTableViewCell.swift */; };
+		752CA312260A6F4500D558E0 /* ContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752CA310260A6F4500D558E0 /* ContentTableViewCell.xib */; };
+		752CA332260A86C400D558E0 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752CA331260A86C400D558E0 /* HeaderView.xib */; };
+		752CA337260A86EE00D558E0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752CA336260A86EE00D558E0 /* HeaderView.swift */; };
+		752CA33C260A892500D558E0 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752CA33B260A892500D558E0 /* NibView.swift */; };
+		753D52A7260AC7F600C46053 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753D52A6260AC7F600C46053 /* UIView.swift */; };
+		753D52AC260AC80500C46053 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753D52AB260AC80500C46053 /* NSObject.swift */; };
 		755B5AC52609A57F000C8FD4 /* AVPlayerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B5AC42609A57F000C8FD4 /* AVPlayerLayer.swift */; };
 		755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A22606CB3200074D6A /* AppDelegate.swift */; };
 		755BF5A52606CB3200074D6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A42606CB3200074D6A /* SceneDelegate.swift */; };
@@ -41,6 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		752CA2FD260A681D00D558E0 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		752CA302260A684B00D558E0 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		752CA30F260A6F4500D558E0 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
+		752CA310260A6F4500D558E0 /* ContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentTableViewCell.xib; sourceTree = "<group>"; };
+		752CA331260A86C400D558E0 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		752CA336260A86EE00D558E0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		752CA33B260A892500D558E0 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		753D52A6260AC7F600C46053 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		753D52AB260AC80500C46053 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		755B5AC42609A57F000C8FD4 /* AVPlayerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerLayer.swift; sourceTree = "<group>"; };
 		755BF59F2606CB3200074D6A /* MuxLiveStreameriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuxLiveStreameriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		755BF5A22606CB3200074D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +106,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		752CA340260A896500D558E0 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				752CA336260A86EE00D558E0 /* HeaderView.swift */,
+				752CA331260A86C400D558E0 /* HeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		752CA341260A897400D558E0 /* contentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				752CA30F260A6F4500D558E0 /* ContentTableViewCell.swift */,
+				752CA310260A6F4500D558E0 /* ContentTableViewCell.xib */,
+			);
+			path = contentTableViewCell;
+			sourceTree = "<group>";
+		};
+		752CA342260A899400D558E0 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				752CA2FD260A681D00D558E0 /* UITableView.swift */,
+				752CA302260A684B00D558E0 /* UITableViewCell.swift */,
+				752CA341260A897400D558E0 /* contentTableViewCell */,
+				752CA340260A896500D558E0 /* HeaderView */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		752CA346260A89C100D558E0 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75610319260830E9006EBF2B /* UIColor.swift */,
+				7561031E26094C3A006EBF2B /* String.swift */,
+				753D52A6260AC7F600C46053 /* UIView.swift */,
+				753D52AB260AC80500C46053 /* NSObject.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		752CA34A260A89DD00D558E0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				755BF5A62606CB3200074D6A /* TabViewController.swift */,
+				755BF5D526079D9900074D6A /* HomeViewController.swift */,
+				755BF5DA26079E9F00074D6A /* DetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		755BF5962606CB3200074D6A = {
 			isa = PBXGroup;
 			children = (
@@ -113,13 +181,12 @@
 			children = (
 				755BF5A22606CB3200074D6A /* AppDelegate.swift */,
 				755BF5A42606CB3200074D6A /* SceneDelegate.swift */,
-				755BF5A62606CB3200074D6A /* TabViewController.swift */,
-				755BF5D526079D9900074D6A /* HomeViewController.swift */,
-				755BF5DA26079E9F00074D6A /* DetailsViewController.swift */,
+				752CA34A260A89DD00D558E0 /* ViewControllers */,
 				756103142607B86D006EBF2B /* UITabBarItem.swift */,
 				755B5AC42609A57F000C8FD4 /* AVPlayerLayer.swift */,
-				75610319260830E9006EBF2B /* UIColor.swift */,
-				7561031E26094C3A006EBF2B /* String.swift */,
+				752CA33B260A892500D558E0 /* NibView.swift */,
+				752CA342260A899400D558E0 /* TableView */,
+				752CA346260A89C100D558E0 /* extensions */,
 				755BF5A82606CB3200074D6A /* Main.storyboard */,
 				755BF5AB2606CB3300074D6A /* Assets.xcassets */,
 				755BF5AD2606CB3300074D6A /* LaunchScreen.storyboard */,
@@ -250,8 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				755BF5AF2606CB3300074D6A /* LaunchScreen.storyboard in Resources */,
+				752CA332260A86C400D558E0 /* HeaderView.xib in Resources */,
 				755BF5AC2606CB3300074D6A /* Assets.xcassets in Resources */,
 				755BF5AA2606CB3200074D6A /* Main.storyboard in Resources */,
+				752CA312260A6F4500D558E0 /* ContentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,15 +345,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753D52A7260AC7F600C46053 /* UIView.swift in Sources */,
 				755BF5A72606CB3200074D6A /* TabViewController.swift in Sources */,
 				7561031A260830E9006EBF2B /* UIColor.swift in Sources */,
 				755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */,
 				756103152607B86D006EBF2B /* UITabBarItem.swift in Sources */,
 				755BF5A52606CB3200074D6A /* SceneDelegate.swift in Sources */,
+				753D52AC260AC80500C46053 /* NSObject.swift in Sources */,
 				755B5AC52609A57F000C8FD4 /* AVPlayerLayer.swift in Sources */,
 				755BF5D626079D9900074D6A /* HomeViewController.swift in Sources */,
+				752CA2FE260A681D00D558E0 /* UITableView.swift in Sources */,
 				7561031F26094C3A006EBF2B /* String.swift in Sources */,
+				752CA303260A684B00D558E0 /* UITableViewCell.swift in Sources */,
 				755BF5DB26079E9F00074D6A /* DetailsViewController.swift in Sources */,
+				752CA311260A6F4500D558E0 /* ContentTableViewCell.swift in Sources */,
+				752CA337260A86EE00D558E0 /* HeaderView.swift in Sources */,
+				752CA33C260A892500D558E0 /* NibView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
