@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 class HomeViewController: UIViewController {
     
@@ -23,6 +24,8 @@ class HomeViewController: UIViewController {
         contentTable.delegate = self
         contentTable.register(nib: "ContentTableViewCell")
         contentTable.adjust(headerHeight: 40)
+
+        let player = AVPlayer(url: .muxStream())
     }
 }
 
@@ -40,6 +43,7 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = HeaderView()
         view.label?.text = "Sample Title"
