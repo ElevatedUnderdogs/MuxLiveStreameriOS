@@ -43,3 +43,10 @@ extension DetailsViewController: UITableViewDelegate {
         return view
     }
 }
+
+extension DetailsViewController: UITabBarControllerDelegate {
+
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("did Select")
+    }
+}

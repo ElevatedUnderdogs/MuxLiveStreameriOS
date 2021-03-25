@@ -11,11 +11,16 @@ import AVKit
 class TabViewController: UITabBarController {
 
     var streamLayer = AVPlayerLayer()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.items?.setTextOnlyAttributes(fontSize: 20, color: .white)
         tabBar.barTintColor = .black
         tabBar.items?[1].title = "SCREEN2"
+        delegate = currentViewController as? UITabBarControllerDelegate
+    }
+
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        delegate = currentViewController as? UITabBarControllerDelegate
     }
 }
