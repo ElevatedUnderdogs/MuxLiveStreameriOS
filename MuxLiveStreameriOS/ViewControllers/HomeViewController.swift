@@ -8,84 +8,72 @@
 import UIKit
 import AVKit
 
-var playerController: AVPlayerViewController!
-
 class HomeViewController: UIViewController {
     
     @IBOutlet var homeLabel: UILabel!
     @IBOutlet var streamBackdrop: UIView!
     @IBOutlet var contentTable: UITableView!
-    let lorems: [String] = .init(repeating: .lorem, count: 4)
+    @IBOutlet var streamBackdropHeight: NSLayoutConstraint!
+    var avPlayer: AVPlayer!
 
+    var statusObserver: NSKeyValueObservation?
+    var playingObserver: NSKeyValueObservation?
 
-    
+    var loremsDataSource: LoremsDataSource = LoremsDataSource(count: 4)
+    var headerDelegate: HeaderDelegate = HeaderDelegate(title: "Sample Title")
+
+    var asset: AVAsset!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
         streamBackdrop.backgroundColor = UIColor(rgb: 0x2D2D2D)
         contentTable.backgroundColor = .black
-        contentTable.dataSource = self
-        contentTable.delegate = self
+        contentTable.dataSource = loremsDataSource
+        contentTable.delegate = headerDelegate
         contentTable.register(nib: "ContentTableViewCell")
         contentTable.adjust(headerHeight: 40)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        play()
+        self.asset = AVAsset(url: .muxStream())
+        let avItem = AVPlayerItem(asset: self.asset)
+        self.avPlayer = AVPlayer(playerItem: avItem)
+        let playerLayer = AVPlayerLayer(player: avPlayer)
+        avPlayer.play()
+        updateStreamViewHeight(playerLayer)
+        avPlayer.remindOfMux24HourLimit()
     }
 }
 
-extension HomeViewController: AVPlayerViewControllerDelegate {
+extension HomeViewController {
 
-    func playerViewController(_ playerViewController: AVPlayerViewController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void) {
-        if tabBarController?.currentViewController != playerController {
-            tabBarController?.currentViewController?.present(playerController, animated: true, completion: nil)
+    fileprivate func updateStreamViewHeight(_ playerLayer: AVPlayerLayer) {
+        self.playingObserver = avPlayer.observe(
+            \.timeControlStatus,
+            options: [.new, .old]
+        ) { player, change in
+            if player.timeControlStatus == .playing {
+                print(playerLayer.videoGravity.rawValue)
+                self.streamBackdrop.add(playerLayer: playerLayer)
+                self.streamBackdropHeight.constant.setAsProportionateHeight(
+                    width: self.streamBackdrop.frame.width,
+                    rectHeight: playerLayer.videoRect.height,
+                    rectWidth: playerLayer.videoRect.width
+                )
+                DispatchQueue.main.async {
+                    self.streamBackdrop.layer.sublayers = []
+                    self.streamBackdrop.add(playerLayer: playerLayer)
+                }
+            }
         }
     }
-
-    func play() {
-        let player = AVPlayer(url: .muxStream())
-        playerController = AVPlayerViewController()
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(didfinishPlaying(notification:)),
-            name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-            object: player.currentItem
-        )
-        playerController.player = player
-        playerController.allowsPictureInPicturePlayback = true
-        playerController.delegate = self
-        playerController.player?.play()
-        present(playerController, animated: true, completion: nil)
-    }
-
-    @objc func didfinishPlaying(notification: NSNotification) {
-        playerController.dismiss(animated: true, completion: nil)
-        let alertView = UIAlertController(title: "Finished", message: "Video finished", preferredStyle: .alert)
-        alertView.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        present(alertView, animated: true, completion: nil)
-    }
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITabBarControllerDelegate {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        lorems.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let contentCell: ContentTableViewCell = tableView.cell()
-        contentCell.contentLabel.text = lorems[indexPath.row]
-        return contentCell
-    }
-}
-
-extension HomeViewController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = HeaderView()
-        view.label?.text = "Sample Title"
-        return view
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("did Select")
     }
 }

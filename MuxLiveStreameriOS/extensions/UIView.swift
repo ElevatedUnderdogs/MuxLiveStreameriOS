@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import AVKit
 
-//extension UIView {
-//
-//    var loadedViewFromNib: UIView? {
-//        UINib(nibName: nibName, bundle: bundle)
-//            .instantiate(withOwner: self, options: nil)
-//            .first as? UIView
-//    }
-//}
+extension UIView {
+
+    func add(playerLayer: AVPlayerLayer) {
+        playerLayer.frame = bounds
+        layer.addSublayer(playerLayer)
+    }
+}
