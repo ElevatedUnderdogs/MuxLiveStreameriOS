@@ -21,6 +21,7 @@ class DetailsViewController: UIViewController {
         detailsTable.delegate = headerDelegate
         detailsTable.register(nib: "ContentTableViewCell")
         detailsTable.adjust(headerHeight: 40)
+        detailsTable.separatorStyle = .none
     }
 }
 

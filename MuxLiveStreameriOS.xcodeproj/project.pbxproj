@@ -38,6 +38,7 @@
 		75E651BA260D54E300B89B8D /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651B9260D54E300B89B8D /* Numeric.swift */; };
 		75E651CF260D653D00B89B8D /* LoremsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651CE260D653D00B89B8D /* LoremsDataSource.swift */; };
 		75E651D4260D661500B89B8D /* HeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651D3260D661500B89B8D /* HeaderDelegate.swift */; };
+		75E651E2260D780200B89B8D /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651E1260D780200B89B8D /* URLRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		75E651B9260D54E300B89B8D /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
 		75E651CE260D653D00B89B8D /* LoremsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsDataSource.swift; sourceTree = "<group>"; };
 		75E651D3260D661500B89B8D /* HeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDelegate.swift; sourceTree = "<group>"; };
+		75E651E1260D780200B89B8D /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				753D52A6260AC7F600C46053 /* UIView.swift */,
 				75E65197260D043A00B89B8D /* UIViewController.swift */,
 				75E6518D260BC97800B89B8D /* URL.swift */,
+				75E651E1260D780200B89B8D /* URLRequest.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				752CA303260A684B00D558E0 /* UITableViewCell.swift in Sources */,
 				75E65193260BD1C900B89B8D /* UITabBarController.swift in Sources */,
 				755BF5DB26079E9F00074D6A /* DetailsViewController.swift in Sources */,
+				75E651E2260D780200B89B8D /* URLRequest.swift in Sources */,
 				75E651D4260D661500B89B8D /* HeaderDelegate.swift in Sources */,
 				752CA311260A6F4500D558E0 /* ContentTableViewCell.swift in Sources */,
 				752CA337260A86EE00D558E0 /* HeaderView.swift in Sources */,

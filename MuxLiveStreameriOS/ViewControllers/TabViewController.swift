@@ -10,6 +10,8 @@ import AVKit
 
 class TabViewController: UITabBarController {
 
+    var pictureInPictureController: AVPictureInPictureController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.items?.setTextOnlyAttributes(fontSize: 20, color: .white)
