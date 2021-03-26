@@ -33,17 +33,66 @@ class HomeViewController: UIViewController {
         contentTable.delegate = headerDelegate
         contentTable.register(nib: "ContentTableViewCell")
         contentTable.adjust(headerHeight: 40)
+        contentTable.separatorStyle = .none
     }
+
+    var playerLayer: AVPlayerLayer!
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.asset = AVAsset(url: .muxStream())
         let avItem = AVPlayerItem(asset: self.asset)
         self.avPlayer = AVPlayer(playerItem: avItem)
-        let playerLayer = AVPlayerLayer(player: avPlayer)
+        self.playerLayer = AVPlayerLayer(player: avPlayer)
         avPlayer.play()
         updateStreamViewHeight(playerLayer)
         avPlayer.remindOfMux24HourLimit()
+        // URLRequest.asset()
+    }
+
+    var localPIP: AVPictureInPictureController!
+
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        super.motionEnded(motion, with: event)
+        try! AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback, options: [])
+        try! AVAudioSession.sharedInstance().setActive(true)
+        let temp = AVPictureInPictureController.pictureInPictureButtonStopImage
+        let tempStart = AVPictureInPictureController.pictureInPictureButtonStartImage
+        if AVPictureInPictureController.isPictureInPictureSupported() {
+            localPIP = AVPictureInPictureController(playerLayer: self.playerLayer)
+            localPIP.startPictureInPicture()
+            localPIP.delegate = self
+        }
+        print("Shaken!")
+    }
+}
+
+extension HomeViewController: AVPictureInPictureControllerDelegate {
+
+
+
+    func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
+        print(#line)
+    }
+
+    func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
+        print(#line)
+    }
+
+    func pictureInPictureControllerWillStopPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
+        print(#line)
+    }
+
+    func pictureInPictureControllerWillStartPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
+        print(#line)
+    }
+
+    func pictureInPictureController(_ pictureInPictureController: AVPictureInPictureController, failedToStartPictureInPictureWithError error: Error) {
+        print(#line)
+    }
+
+    func pictureInPictureController(_ pictureInPictureController: AVPictureInPictureController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void) {
+        print(#line)
     }
 }
 
@@ -73,7 +122,16 @@ extension HomeViewController {
 
 extension HomeViewController: UITabBarControllerDelegate {
 
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("did Select")
+
+    func tabBarController(
+        _ tabBarController: UITabBarController,
+        didSelect viewController: UIViewController
+    ) {
+
+        guard let tabViewController = tabBarController as? TabViewController else { return }
+        tabViewController.pictureInPictureController = AVPictureInPictureController(playerLayer: self.playerLayer)
+        DispatchQueue.main.async {
+            tabViewController.pictureInPictureController?.startPictureInPicture()
+        }
     }
 }

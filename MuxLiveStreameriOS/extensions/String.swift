@@ -16,4 +16,8 @@ extension String {
     static var muxNoVideoMessage: String {
         "Mux videos last only 24 hours, perhaps an update of the video content is in order.  Go to: https://dashboard.mux.com/organizations/1veshj/environments/iomibn/video/assets"
     }
+
+    static var currentAssetID: String {
+        "W4QbiGLpZFvnts73xRn102E5IC01lVCP3je00c6Ndj2mYQ"
+    }
 }
