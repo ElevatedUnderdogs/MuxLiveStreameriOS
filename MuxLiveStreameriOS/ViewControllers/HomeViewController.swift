@@ -55,8 +55,8 @@ extension HomeViewController {
             options: [.new, .old]
         ) { player, change in
             if player.timeControlStatus == .playing {
+                print(playerLayer.videoGravity.rawValue)
                 self.streamBackdrop.add(playerLayer: playerLayer)
-                print(self.asset.tracks(withMediaType: .video).first)
                 self.streamBackdropHeight.constant.setAsProportionateHeight(
                     width: self.streamBackdrop.frame.width,
                     rectHeight: playerLayer.videoRect.height,

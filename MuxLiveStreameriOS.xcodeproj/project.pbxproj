@@ -36,7 +36,6 @@
 		75E651A2260D04FC00B89B8D /* AVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651A1260D04FC00B89B8D /* AVPlayerViewController.swift */; };
 		75E651AA260D0EF100B89B8D /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651A9260D0EF100B89B8D /* UIAlertController.swift */; };
 		75E651BA260D54E300B89B8D /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651B9260D54E300B89B8D /* Numeric.swift */; };
-		75E651BF260D5F3900B89B8D /* AVAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651BE260D5F3900B89B8D /* AVAsset.swift */; };
 		75E651CF260D653D00B89B8D /* LoremsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651CE260D653D00B89B8D /* LoremsDataSource.swift */; };
 		75E651D4260D661500B89B8D /* HeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651D3260D661500B89B8D /* HeaderDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -94,7 +93,6 @@
 		75E651A1260D04FC00B89B8D /* AVPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerViewController.swift; sourceTree = "<group>"; };
 		75E651A9260D0EF100B89B8D /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		75E651B9260D54E300B89B8D /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
-		75E651BE260D5F3900B89B8D /* AVAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAsset.swift; sourceTree = "<group>"; };
 		75E651CE260D653D00B89B8D /* LoremsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsDataSource.swift; sourceTree = "<group>"; };
 		75E651D3260D661500B89B8D /* HeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,7 +156,6 @@
 		752CA346260A89C100D558E0 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				75E651BE260D5F3900B89B8D /* AVAsset.swift */,
 				75E6519C260D04A300B89B8D /* AVPlayer.swift */,
 				75E651A1260D04FC00B89B8D /* AVPlayerViewController.swift */,
 				753D52AB260AC80500C46053 /* NSObject.swift */,
@@ -387,7 +384,6 @@
 				75E6519D260D04A300B89B8D /* AVPlayer.swift in Sources */,
 				755BF5D626079D9900074D6A /* HomeViewController.swift in Sources */,
 				752CA2FE260A681D00D558E0 /* UITableView.swift in Sources */,
-				75E651BF260D5F3900B89B8D /* AVAsset.swift in Sources */,
 				7561031F26094C3A006EBF2B /* String.swift in Sources */,
 				752CA303260A684B00D558E0 /* UITableViewCell.swift in Sources */,
 				75E65193260BD1C900B89B8D /* UITabBarController.swift in Sources */,

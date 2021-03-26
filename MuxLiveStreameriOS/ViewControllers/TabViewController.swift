@@ -10,8 +10,6 @@ import AVKit
 
 class TabViewController: UITabBarController {
 
-    var streamLayer = AVPlayerLayer()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.items?.setTextOnlyAttributes(fontSize: 20, color: .white)
