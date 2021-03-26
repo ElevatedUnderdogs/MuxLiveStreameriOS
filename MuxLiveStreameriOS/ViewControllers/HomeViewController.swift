@@ -41,64 +41,23 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.asset = AVAsset(url: .muxStream())
-        let avItem = AVPlayerItem(asset: self.asset)
-        self.avPlayer = AVPlayer(playerItem: avItem)
+        self.avPlayer = AVPlayer(playerItem: AVPlayerItem(asset: self.asset))
         self.playerLayer = AVPlayerLayer(player: avPlayer)
         avPlayer.play()
-        updateStreamViewHeight(playerLayer)
-        avPlayer.remindOfMux24HourLimit()
-        // URLRequest.asset()
-    }
-
-    var localPIP: AVPictureInPictureController!
-
-    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        super.motionEnded(motion, with: event)
-        try! AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback, options: [])
-        try! AVAudioSession.sharedInstance().setActive(true)
-        let temp = AVPictureInPictureController.pictureInPictureButtonStopImage
-        let tempStart = AVPictureInPictureController.pictureInPictureButtonStartImage
-        if AVPictureInPictureController.isPictureInPictureSupported() {
-            localPIP = AVPictureInPictureController(playerLayer: self.playerLayer)
-            localPIP.startPictureInPicture()
-            localPIP.delegate = self
+        URLRequest.asset().getCodable { (asset: MuxAsset?) in
+            guard let size = asset?.data.tracks.first?.maxSize else { return }
+            self.updateStreamViewHeight(self.playerLayer, size: size)
         }
-        print("Shaken!")
-    }
-}
-
-extension HomeViewController: AVPictureInPictureControllerDelegate {
-
-
-
-    func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
-        print(#line)
-    }
-
-    func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
-        print(#line)
-    }
-
-    func pictureInPictureControllerWillStopPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
-        print(#line)
-    }
-
-    func pictureInPictureControllerWillStartPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
-        print(#line)
-    }
-
-    func pictureInPictureController(_ pictureInPictureController: AVPictureInPictureController, failedToStartPictureInPictureWithError error: Error) {
-        print(#line)
-    }
-
-    func pictureInPictureController(_ pictureInPictureController: AVPictureInPictureController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void) {
-        print(#line)
+        avPlayer.remindOfMux24HourLimit()
     }
 }
 
 extension HomeViewController {
 
-    fileprivate func updateStreamViewHeight(_ playerLayer: AVPlayerLayer) {
+    fileprivate func updateStreamViewHeight(
+        _ playerLayer: AVPlayerLayer,
+        size: CGSize
+    ) {
         self.playingObserver = avPlayer.observe(
             \.timeControlStatus,
             options: [.new, .old]
@@ -128,10 +87,5 @@ extension HomeViewController: UITabBarControllerDelegate {
         didSelect viewController: UIViewController
     ) {
 
-        guard let tabViewController = tabBarController as? TabViewController else { return }
-        tabViewController.pictureInPictureController = AVPictureInPictureController(playerLayer: self.playerLayer)
-        DispatchQueue.main.async {
-            tabViewController.pictureInPictureController?.startPictureInPicture()
-        }
     }
 }

@@ -39,6 +39,8 @@
 		75E651CF260D653D00B89B8D /* LoremsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651CE260D653D00B89B8D /* LoremsDataSource.swift */; };
 		75E651D4260D661500B89B8D /* HeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651D3260D661500B89B8D /* HeaderDelegate.swift */; };
 		75E651E2260D780200B89B8D /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651E1260D780200B89B8D /* URLRequest.swift */; };
+		75E651EF260E6C8C00B89B8D /* Promisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651EE260E6C8C00B89B8D /* Promisable.swift */; };
+		75E651F7260E8CE400B89B8D /* MuxAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651F6260E8CE400B89B8D /* MuxAsset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		75E651CE260D653D00B89B8D /* LoremsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsDataSource.swift; sourceTree = "<group>"; };
 		75E651D3260D661500B89B8D /* HeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDelegate.swift; sourceTree = "<group>"; };
 		75E651E1260D780200B89B8D /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		75E651EE260E6C8C00B89B8D /* Promisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promisable.swift; sourceTree = "<group>"; };
+		75E651F6260E8CE400B89B8D /* MuxAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxAsset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 				75E651A1260D04FC00B89B8D /* AVPlayerViewController.swift */,
 				753D52AB260AC80500C46053 /* NSObject.swift */,
 				75E651B9260D54E300B89B8D /* Numeric.swift */,
+				75E651EE260E6C8C00B89B8D /* Promisable.swift */,
 				7561031E26094C3A006EBF2B /* String.swift */,
 				75E651A9260D0EF100B89B8D /* UIAlertController.swift */,
 				75610319260830E9006EBF2B /* UIColor.swift */,
@@ -212,6 +217,7 @@
 				752CA34A260A89DD00D558E0 /* ViewControllers */,
 				756103142607B86D006EBF2B /* UITabBarItem.swift */,
 				752CA33B260A892500D558E0 /* NibView.swift */,
+				75E651F6260E8CE400B89B8D /* MuxAsset.swift */,
 				752CA342260A899400D558E0 /* TableView */,
 				752CA346260A89C100D558E0 /* extensions */,
 				755BF5A82606CB3200074D6A /* Main.storyboard */,
@@ -377,6 +383,7 @@
 				7561031A260830E9006EBF2B /* UIColor.swift in Sources */,
 				75E651BA260D54E300B89B8D /* Numeric.swift in Sources */,
 				75E65198260D043A00B89B8D /* UIViewController.swift in Sources */,
+				75E651EF260E6C8C00B89B8D /* Promisable.swift in Sources */,
 				75E651AA260D0EF100B89B8D /* UIAlertController.swift in Sources */,
 				75E651CF260D653D00B89B8D /* LoremsDataSource.swift in Sources */,
 				755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */,
@@ -394,6 +401,7 @@
 				75E651E2260D780200B89B8D /* URLRequest.swift in Sources */,
 				75E651D4260D661500B89B8D /* HeaderDelegate.swift in Sources */,
 				752CA311260A6F4500D558E0 /* ContentTableViewCell.swift in Sources */,
+				75E651F7260E8CE400B89B8D /* MuxAsset.swift in Sources */,
 				752CA337260A86EE00D558E0 /* HeaderView.swift in Sources */,
 				75E651A2260D04FC00B89B8D /* AVPlayerViewController.swift in Sources */,
 				752CA33C260A892500D558E0 /* NibView.swift in Sources */,

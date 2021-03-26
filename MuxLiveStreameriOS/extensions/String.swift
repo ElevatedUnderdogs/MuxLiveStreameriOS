@@ -18,6 +18,10 @@ extension String {
     }
 
     static var currentAssetID: String {
+        "1nH8B0000fRnTHPQFeKsdFH8WF5LloxBtZd98ER00ghqzs"
+    }
+
+    static var playBackID: String {
         "W4QbiGLpZFvnts73xRn102E5IC01lVCP3je00c6Ndj2mYQ"
     }
 }
