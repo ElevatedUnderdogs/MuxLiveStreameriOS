@@ -43,10 +43,21 @@ class HomeViewController: UIViewController {
         self.asset = AVAsset(url: .muxStream())
         self.avPlayer = AVPlayer(playerItem: AVPlayerItem(asset: self.asset))
         self.playerLayer = AVPlayerLayer(player: avPlayer)
-        avPlayer.play()
         URLRequest.asset().getCodable { (asset: MuxAsset?) in
-            guard let size = asset?.data.tracks.first?.maxSize else { return }
-            self.updateStreamViewHeight(self.playerLayer, size: size)
+            guard let size = asset?.data.tracks.first?.maxSize else {return}
+            DispatchQueue.main.async {
+                self.streamBackdropHeight.constant.setAsProportionateHeight(
+                    width: self.streamBackdrop.frame.width,
+                    rectHeight: size.height,
+                    rectWidth: size.width
+                )
+                print(asset?.data.aspectRatio)
+                self.streamBackdrop.add(playerLayer: self.playerLayer)
+                self.avPlayer.play()
+                print(self.playerLayer.videoRect.size)
+                print(self.playerLayer.videoRect.size)
+                print(self.playerLayer.videoRect.size)
+            }
         }
         avPlayer.remindOfMux24HourLimit()
     }
@@ -55,13 +66,13 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
 
     fileprivate func updateStreamViewHeight(
-        _ playerLayer: AVPlayerLayer,
-        size: CGSize
+        _ playerLayer: AVPlayerLayer
     ) {
         self.playingObserver = avPlayer.observe(
             \.timeControlStatus,
             options: [.new, .old]
         ) { player, change in
+
             if player.timeControlStatus == .playing {
                 print(playerLayer.videoGravity.rawValue)
                 self.streamBackdrop.add(playerLayer: playerLayer)
