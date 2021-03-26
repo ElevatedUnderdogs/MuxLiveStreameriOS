@@ -10,18 +10,8 @@ import AVKit
 
 extension UIView {
 
-    func add(player: AVPlayer) {
-        let playerLayer = AVPlayerLayer(player: player)
+    func add(playerLayer: AVPlayerLayer) {
         playerLayer.frame = bounds
         layer.addSublayer(playerLayer)
-        if playerLayer.superlayer == nil {
-            print("not added properly")
-        }
     }
-
-//    var loadedViewFromNib: UIView? {
-//        UINib(nibName: nibName, bundle: bundle)
-//            .instantiate(withOwner: self, options: nil)
-//            .first as? UIView
-//    }
 }

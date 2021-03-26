@@ -8,67 +8,66 @@
 import UIKit
 import AVKit
 
-var playerController: AVPlayerViewController!
-
 class HomeViewController: UIViewController {
     
     @IBOutlet var homeLabel: UILabel!
     @IBOutlet var streamBackdrop: UIView!
     @IBOutlet var contentTable: UITableView!
-    let lorems: [String] = .init(repeating: .lorem, count: 4)
+    @IBOutlet var streamBackdropHeight: NSLayoutConstraint!
     var avPlayer: AVPlayer!
+
+    var statusObserver: NSKeyValueObservation?
+    var playingObserver: NSKeyValueObservation?
+
+    var loremsDataSource: LoremsDataSource = LoremsDataSource(count: 4)
+    var headerDelegate: HeaderDelegate = HeaderDelegate(title: "Sample Title")
+
+    var asset: AVAsset!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
         streamBackdrop.backgroundColor = UIColor(rgb: 0x2D2D2D)
         contentTable.backgroundColor = .black
-        contentTable.dataSource = self
-        contentTable.delegate = self
+        contentTable.dataSource = loremsDataSource
+        contentTable.delegate = headerDelegate
         contentTable.register(nib: "ContentTableViewCell")
         contentTable.adjust(headerHeight: 40)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.avPlayer = AVPlayer(url: .muxStream())
-        streamBackdrop.add(player: avPlayer)
+        self.asset = AVAsset(url: .muxStream())
+        let avItem = AVPlayerItem(asset: self.asset)
+        self.avPlayer = AVPlayer(playerItem: avItem)
+        let playerLayer = AVPlayerLayer(player: avPlayer)
         avPlayer.play()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            assert(self.avPlayer.hasVideo, .muxNoVideoMessage)
+        updateStreamViewHeight(playerLayer)
+        avPlayer.remindOfMux24HourLimit()
+    }
+}
+
+extension HomeViewController {
+
+    fileprivate func updateStreamViewHeight(_ playerLayer: AVPlayerLayer) {
+        self.playingObserver = avPlayer.observe(
+            \.timeControlStatus,
+            options: [.new, .old]
+        ) { player, change in
+            if player.timeControlStatus == .playing {
+                self.streamBackdrop.add(playerLayer: playerLayer)
+                print(self.asset.tracks(withMediaType: .video).first)
+                self.streamBackdropHeight.constant.setAsProportionateHeight(
+                    width: self.streamBackdrop.frame.width,
+                    rectHeight: playerLayer.videoRect.height,
+                    rectWidth: playerLayer.videoRect.width
+                )
+                DispatchQueue.main.async {
+                    self.streamBackdrop.layer.sublayers = []
+                    self.streamBackdrop.add(playerLayer: playerLayer)
+                }
+            }
         }
-    }
-}
-
-extension HomeViewController: AVPlayerViewControllerDelegate {
-
-    func playerViewController(_ playerViewController: AVPlayerViewController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void) {
-        tabBarController?.safePresent(
-            viewControllerToPresent: playerController,
-            animated: true
-        )
-    }
-}
-
-extension HomeViewController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        lorems.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let contentCell: ContentTableViewCell = tableView.cell()
-        contentCell.contentLabel.text = lorems[indexPath.row]
-        return contentCell
-    }
-}
-
-extension HomeViewController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = HeaderView()
-        view.label?.text = "Sample Title"
-        return view
     }
 }
 

@@ -20,4 +20,10 @@ extension AVPlayer {
             .filter({$0.assetTrack?.mediaType == AVMediaType.video})
             .count != 0
     }
+
+    func remindOfMux24HourLimit() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            assert(self.hasVideo, .muxNoVideoMessage)
+        }
+    }
 }
