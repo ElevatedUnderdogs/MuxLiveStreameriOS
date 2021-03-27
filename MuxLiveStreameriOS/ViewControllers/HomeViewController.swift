@@ -77,15 +77,13 @@ extension HomeViewController {
 
 extension HomeViewController: UITabBarControllerDelegate {
 
-
     func tabBarController(
         _ tabBarController: UITabBarController,
         didSelect viewController: UIViewController
     ) {
-        guard let tabViewController = tabBarController as? TabViewController else { return }
-        tabViewController.pictureInPictureController = AVPictureInPictureController(playerLayer: self.playerLayer)
-        DispatchQueue.main.async {
-            tabViewController.pictureInPictureController?.startPictureInPicture()
-        }
+        guard let next = viewController as? DetailsViewController else { return }
+        next.avPlayer = avPlayer
+        next.playerView.player = avPlayer
+        next.size = playerLayer.videoRect.size
     }
 }

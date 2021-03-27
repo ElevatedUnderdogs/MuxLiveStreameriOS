@@ -14,4 +14,13 @@ extension UIView {
         playerLayer.frame = bounds
         layer.addSublayer(playerLayer)
     }
+
+    func equalConstraints(with view: UIView) -> [NSLayoutConstraint] {
+        [
+            leftAnchor.constraint(equalTo: view.leftAnchor),
+            topAnchor.constraint(equalTo: view.topAnchor),
+            rightAnchor.constraint(equalTo: view.rightAnchor),
+            bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ]
+    }
 }
