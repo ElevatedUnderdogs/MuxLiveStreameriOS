@@ -34,7 +34,6 @@
 		75E65198260D043A00B89B8D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65197260D043A00B89B8D /* UIViewController.swift */; };
 		75E6519D260D04A300B89B8D /* AVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E6519C260D04A300B89B8D /* AVPlayer.swift */; };
 		75E651A2260D04FC00B89B8D /* AVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651A1260D04FC00B89B8D /* AVPlayerViewController.swift */; };
-		75E651AA260D0EF100B89B8D /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651A9260D0EF100B89B8D /* UIAlertController.swift */; };
 		75E651BA260D54E300B89B8D /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651B9260D54E300B89B8D /* Numeric.swift */; };
 		75E651CF260D653D00B89B8D /* LoremsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651CE260D653D00B89B8D /* LoremsDataSource.swift */; };
 		75E651D4260D661500B89B8D /* HeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651D3260D661500B89B8D /* HeaderDelegate.swift */; };
@@ -42,6 +41,18 @@
 		75E651FF260EAD3700B89B8D /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651FE260EAD3700B89B8D /* PlayerView.swift */; };
 		75E65207260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65206260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift */; };
 		75E65212260ED65A00B89B8D /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65211260ED65A00B89B8D /* AppDelegateTests.swift */; };
+		75E65228260EEC6E00B89B8D /* AVPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65227260EEC6E00B89B8D /* AVPlayerTests.swift */; };
+		75E6522D260EEF8A00B89B8D /* AVPlayerControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E6522C260EEF8A00B89B8D /* AVPlayerControllerTests.swift */; };
+		75E65232260EF03900B89B8D /* NSObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65231260EF03900B89B8D /* NSObjectTest.swift */; };
+		75E65237260EF34E00B89B8D /* NumericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65236260EF34E00B89B8D /* NumericTests.swift */; };
+		75E6523C260EF47100B89B8D /* PlayerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E6523B260EF47100B89B8D /* PlayerViewTests.swift */; };
+		75E65241260EF5DF00B89B8D /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65240260EF5DF00B89B8D /* StringTests.swift */; };
+		75E65246260EF66200B89B8D /* NSConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65245260EF66200B89B8D /* NSConstraintTests.swift */; };
+		75E65256260EF7CA00B89B8D /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65255260EF7CA00B89B8D /* UIColorTests.swift */; };
+		75E6525B260EF8E500B89B8D /* UITabControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E6525A260EF8E500B89B8D /* UITabControllerTests.swift */; };
+		75E65260260EFA2C00B89B8D /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E6525F260EFA2C00B89B8D /* UIViewTests.swift */; };
+		75E65265260EFC0700B89B8D /* MuxURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65264260EFC0700B89B8D /* MuxURLTests.swift */; };
+		75E6526A260EFC5B00B89B8D /* URLRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65269260EFC5B00B89B8D /* URLRequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +106,6 @@
 		75E65197260D043A00B89B8D /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		75E6519C260D04A300B89B8D /* AVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayer.swift; sourceTree = "<group>"; };
 		75E651A1260D04FC00B89B8D /* AVPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerViewController.swift; sourceTree = "<group>"; };
-		75E651A9260D0EF100B89B8D /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		75E651B9260D54E300B89B8D /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
 		75E651CE260D653D00B89B8D /* LoremsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsDataSource.swift; sourceTree = "<group>"; };
 		75E651D3260D661500B89B8D /* HeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +113,18 @@
 		75E651FE260EAD3700B89B8D /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		75E65206260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		75E65211260ED65A00B89B8D /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		75E65227260EEC6E00B89B8D /* AVPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerTests.swift; sourceTree = "<group>"; };
+		75E6522C260EEF8A00B89B8D /* AVPlayerControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerControllerTests.swift; sourceTree = "<group>"; };
+		75E65231260EF03900B89B8D /* NSObjectTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectTest.swift; sourceTree = "<group>"; };
+		75E65236260EF34E00B89B8D /* NumericTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTests.swift; sourceTree = "<group>"; };
+		75E6523B260EF47100B89B8D /* PlayerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewTests.swift; sourceTree = "<group>"; };
+		75E65240260EF5DF00B89B8D /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		75E65245260EF66200B89B8D /* NSConstraintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSConstraintTests.swift; sourceTree = "<group>"; };
+		75E65255260EF7CA00B89B8D /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
+		75E6525A260EF8E500B89B8D /* UITabControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabControllerTests.swift; sourceTree = "<group>"; };
+		75E6525F260EFA2C00B89B8D /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
+		75E65264260EFC0700B89B8D /* MuxURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxURLTests.swift; sourceTree = "<group>"; };
+		75E65269260EFC5B00B89B8D /* URLRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +193,6 @@
 				75E651FE260EAD3700B89B8D /* PlayerView.swift */,
 				7561031E26094C3A006EBF2B /* String.swift */,
 				75E65206260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift */,
-				75E651A9260D0EF100B89B8D /* UIAlertController.swift */,
 				75610319260830E9006EBF2B /* UIColor.swift */,
 				75E65192260BD1C900B89B8D /* UITabBarController.swift */,
 				753D52A6260AC7F600C46053 /* UIView.swift */,
@@ -235,6 +256,18 @@
 			children = (
 				755BF5B92606CB3300074D6A /* MuxLiveStreameriOSTests.swift */,
 				75E65211260ED65A00B89B8D /* AppDelegateTests.swift */,
+				75E65227260EEC6E00B89B8D /* AVPlayerTests.swift */,
+				75E6522C260EEF8A00B89B8D /* AVPlayerControllerTests.swift */,
+				75E65231260EF03900B89B8D /* NSObjectTest.swift */,
+				75E65236260EF34E00B89B8D /* NumericTests.swift */,
+				75E6523B260EF47100B89B8D /* PlayerViewTests.swift */,
+				75E65240260EF5DF00B89B8D /* StringTests.swift */,
+				75E65245260EF66200B89B8D /* NSConstraintTests.swift */,
+				75E65255260EF7CA00B89B8D /* UIColorTests.swift */,
+				75E6525A260EF8E500B89B8D /* UITabControllerTests.swift */,
+				75E6525F260EFA2C00B89B8D /* UIViewTests.swift */,
+				75E65264260EFC0700B89B8D /* MuxURLTests.swift */,
+				75E65269260EFC5B00B89B8D /* URLRequestTests.swift */,
 				755BF5BB2606CB3300074D6A /* Info.plist */,
 			);
 			path = MuxLiveStreameriOSTests;
@@ -387,7 +420,6 @@
 				7561031A260830E9006EBF2B /* UIColor.swift in Sources */,
 				75E651BA260D54E300B89B8D /* Numeric.swift in Sources */,
 				75E65198260D043A00B89B8D /* UIViewController.swift in Sources */,
-				75E651AA260D0EF100B89B8D /* UIAlertController.swift in Sources */,
 				75E651CF260D653D00B89B8D /* LoremsDataSource.swift in Sources */,
 				75E651FF260EAD3700B89B8D /* PlayerView.swift in Sources */,
 				755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */,
@@ -416,7 +448,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E65212260ED65A00B89B8D /* AppDelegateTests.swift in Sources */,
+				75E6523C260EF47100B89B8D /* PlayerViewTests.swift in Sources */,
+				75E65232260EF03900B89B8D /* NSObjectTest.swift in Sources */,
+				75E65246260EF66200B89B8D /* NSConstraintTests.swift in Sources */,
 				755BF5BA2606CB3300074D6A /* MuxLiveStreameriOSTests.swift in Sources */,
+				75E65228260EEC6E00B89B8D /* AVPlayerTests.swift in Sources */,
+				75E6525B260EF8E500B89B8D /* UITabControllerTests.swift in Sources */,
+				75E6522D260EEF8A00B89B8D /* AVPlayerControllerTests.swift in Sources */,
+				75E65260260EFA2C00B89B8D /* UIViewTests.swift in Sources */,
+				75E65256260EF7CA00B89B8D /* UIColorTests.swift in Sources */,
+				75E65265260EFC0700B89B8D /* MuxURLTests.swift in Sources */,
+				75E65241260EF5DF00B89B8D /* StringTests.swift in Sources */,
+				75E65237260EF34E00B89B8D /* NumericTests.swift in Sources */,
+				75E6526A260EFC5B00B89B8D /* URLRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

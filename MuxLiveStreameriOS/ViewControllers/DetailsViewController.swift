@@ -48,6 +48,5 @@ extension DetailsViewController: UITabBarControllerDelegate {
         guard let next = viewController as? HomeViewController else { return }
         // next.streamBackdrop = streamBackdrop
         next.avPlayer = avPlayer
-        
     }
 }
