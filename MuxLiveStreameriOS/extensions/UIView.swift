@@ -11,7 +11,7 @@ import AVKit
 extension UIView {
 
     func add(playerLayer: AVPlayerLayer) {
-        playerLayer.bounds = bounds
+        playerLayer.frame = bounds
         layer.addSublayer(playerLayer)
     }
 

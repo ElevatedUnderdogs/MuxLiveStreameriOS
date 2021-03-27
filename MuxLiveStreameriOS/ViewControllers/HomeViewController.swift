@@ -9,22 +9,16 @@ import UIKit
 import AVKit
 
 class HomeViewController: UIViewController {
-    
-    @IBOutlet var homeLabel: UILabel!
+
     @IBOutlet var streamBackdrop: UIView!
     @IBOutlet var contentTable: UITableView!
     @IBOutlet var streamBackdropHeight: NSLayoutConstraint!
     @IBOutlet var spinner: UIActivityIndicatorView!
     var avPlayer: AVPlayer!
-
-    var statusObserver: NSKeyValueObservation?
     var playingObserver: NSKeyValueObservation?
-
     var loremsDataSource: LoremsDataSource = LoremsDataSource(count: 4)
     var headerDelegate: HeaderDelegate = HeaderDelegate(title: "Sample Title")
-
     var asset: AVAsset!
-    var localPIP: AVPictureInPictureController!
     var playerLayer: AVPlayerLayer!
 
     override func viewDidLoad() {
@@ -51,28 +45,25 @@ class HomeViewController: UIViewController {
     }
 }
 
-
 extension HomeViewController {
 
     fileprivate func updateStreamViewHeight(_ playerLayer: AVPlayerLayer) {
         self.playingObserver = avPlayer.observe(
             \.timeControlStatus,
             options: [.new, .old]
-        ) { player, change in
-            if player.timeControlStatus == .playing {
+        ) { [weak self] player, change in
+            guard player.timeControlStatus == .playing, let `self` = self else { return }
+            DispatchQueue.main.async {
                 self.spinner?.stopAnimating()
                 self.spinner = nil
-                print(playerLayer.videoGravity.rawValue)
                 self.streamBackdrop.add(playerLayer: playerLayer)
                 self.streamBackdropHeight.constant.setAsProportionateHeight(
                     width: self.streamBackdrop.frame.width,
                     rectHeight: playerLayer.videoRect.height,
                     rectWidth: playerLayer.videoRect.width
                 )
-                DispatchQueue.main.async {
-                    self.streamBackdrop.layer.sublayers = []
-                    self.streamBackdrop.add(playerLayer: playerLayer)
-                }
+                self.streamBackdrop.layer.sublayers = []
+                self.streamBackdrop.add(playerLayer: playerLayer)
             }
         }
     }
@@ -84,9 +75,9 @@ extension HomeViewController: UITabBarControllerDelegate {
         _ tabBarController: UITabBarController,
         didSelect viewController: UIViewController
     ) {
-        guard let next = viewController as? DetailsViewController else { return }
-        next.avPlayer = avPlayer
-        next.playerView.player = avPlayer
-        next.size = playerLayer.videoRect.size
+        let next = viewController as? DetailsViewController
+        next?.avPlayer = avPlayer
+        next?.playerView.player = avPlayer
+        next?.size = playerLayer.videoRect.size
     }
 }

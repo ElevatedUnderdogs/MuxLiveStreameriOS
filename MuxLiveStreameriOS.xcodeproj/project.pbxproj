@@ -53,6 +53,7 @@
 		75E65260260EFA2C00B89B8D /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E6525F260EFA2C00B89B8D /* UIViewTests.swift */; };
 		75E65265260EFC0700B89B8D /* MuxURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65264260EFC0700B89B8D /* MuxURLTests.swift */; };
 		75E6526A260EFC5B00B89B8D /* URLRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65269260EFC5B00B89B8D /* URLRequestTests.swift */; };
+		75E6529F260FBD2A00B89B8D /* socketaddr_in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E6529E260FBD2A00B89B8D /* socketaddr_in.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		75E6525F260EFA2C00B89B8D /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
 		75E65264260EFC0700B89B8D /* MuxURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxURLTests.swift; sourceTree = "<group>"; };
 		75E65269260EFC5B00B89B8D /* URLRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestTests.swift; sourceTree = "<group>"; };
+		75E6529E260FBD2A00B89B8D /* socketaddr_in.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socketaddr_in.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				75E651FE260EAD3700B89B8D /* PlayerView.swift */,
 				7561031E26094C3A006EBF2B /* String.swift */,
 				75E65206260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift */,
+				75E6529E260FBD2A00B89B8D /* socketaddr_in.swift */,
 				75610319260830E9006EBF2B /* UIColor.swift */,
 				75E65192260BD1C900B89B8D /* UITabBarController.swift */,
 				753D52A6260AC7F600C46053 /* UIView.swift */,
@@ -414,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E6529F260FBD2A00B89B8D /* socketaddr_in.swift in Sources */,
 				753D52A7260AC7F600C46053 /* UIView.swift in Sources */,
 				75E65207260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift in Sources */,
 				755BF5A72606CB3200074D6A /* TabViewController.swift in Sources */,

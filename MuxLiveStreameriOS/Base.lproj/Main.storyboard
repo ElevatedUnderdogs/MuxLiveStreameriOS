@@ -113,7 +113,6 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="nX0-7G-pwS"/>
                     <connections>
                         <outlet property="contentTable" destination="XV8-GI-6qX" id="gvT-OI-Js8"/>
-                        <outlet property="homeLabel" destination="Lqc-GT-1Ms" id="dAD-z4-rSA"/>
                         <outlet property="spinner" destination="SSN-Tc-UoY" id="0s0-qb-9gV"/>
                         <outlet property="streamBackdrop" destination="Lxu-qL-B0h" id="B5h-bB-VZE"/>
                         <outlet property="streamBackdropHeight" destination="b3V-oz-i5j" id="cdC-IW-IIp"/>
