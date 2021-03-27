@@ -98,7 +98,7 @@ Letting the Streaming player keep its same view allows us to avoid the problem o
 - [x] [tests @77% coverage](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/11)
 - [x] [Add loading spinner](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/10)
 - [x] [fix crash when clicking the stream](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/9)
-- [x] Create Launch Screen
+- [x] [Create Launch Screen](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/13)
 - [x] [Create app icon](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/14)
 - [ ] No internet handling
 - [ ] loop the stream
