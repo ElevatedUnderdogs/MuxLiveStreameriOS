@@ -98,10 +98,10 @@ Letting the Streaming player keep its same view allows us to avoid the problem o
 - There are many options for creating custom views.  nibs or programmatically written views can be reused, unlike views directly implemented in storyboard. Unique storyboards can be used for each reusable viewController.  
 - The only reused view appears to be the one for the tableViewCell.  
 
-- The TabBar has a rule that "You should never access the tab bar view of a tab bar controller directly." This means in order to have the view transition I can 
-        - Overlap the TabBar Controller with a Transparent, touch through view Controller that has an opaque streamer view. 
-        - Create a custom Tab Bar Controller that allows me to put the view overlapping. 
-        - Or instead of using a Tab Bar, a navigation controller could be used. 
-        - Or the view cna be passed as a payload to the other tab View.  We can simulate the movement, by capturing the frame and animating it up and down. 
+- The TabBar has a rule that "You should never access the tab bar view of a tab bar controller directly." This means in order to have the view transition I can:
+  - Overlap the TabBar Controller with a Transparent, touch through view Controller that has an opaque streamer view. 
+  - Create a custom Tab Bar Controller that allows me to put the view overlapping. 
+  - Or instead of using a Tab Bar, a navigation controller could be used. 
+  - Or the view cna be passed as a payload to the other tab View.  We can simulate the movement, by capturing the frame and animating it up and down. 
 
 
