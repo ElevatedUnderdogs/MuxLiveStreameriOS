@@ -28,7 +28,7 @@ A live streaming app for the Stonks iOS interview
 1. Efficiency, performance, and readability of your code
 2. Ability to navigate third-party libraries where the documentation might not be
 very detailed.
-3. Proper documentation (code comments and readme)\
+3. Proper documentation (code comments and readme)
 
 # UI Plan #
 The assignment includes a screen shot for each of the two required screens. 
