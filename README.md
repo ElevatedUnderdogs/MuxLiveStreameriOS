@@ -99,7 +99,7 @@ Letting the Streaming player keep its same view allows us to avoid the problem o
 - [x] [Add loading spinner](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/10)
 - [x] [fix crash when clicking the stream](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/9)
 - [x] Create Launch Screen
-- [x] Create app icon
+- [x] [Create app icon](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/14)
 - [ ] No internet handling
 - [ ] loop the stream
 - [ ] verification with multiple different videos that have visually distinct parts to confirm the whole video is being played properly, and that the current video location is the same when transitioning controller views. 
