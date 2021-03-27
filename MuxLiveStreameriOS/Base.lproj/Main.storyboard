@@ -20,12 +20,22 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWb-zo-bh1" customClass="PlayerView" customModule="MuxLiveStreameriOS" customModuleProvider="target">
+                                <rect key="frame" x="164" y="675" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ImG-Q2-pbX"/>
+                                    <constraint firstAttribute="width" constant="240" id="LjJ-N0-e7F"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aIR-PX-vwp"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2Vb-Nu-UEo" firstAttribute="leading" secondItem="aIR-PX-vwp" secondAttribute="leading" id="Auy-7V-dHq"/>
+                            <constraint firstItem="aIR-PX-vwp" firstAttribute="trailing" secondItem="yWb-zo-bh1" secondAttribute="trailing" constant="10" id="P6m-UH-jwJ"/>
                             <constraint firstItem="2Vb-Nu-UEo" firstAttribute="top" secondItem="aIR-PX-vwp" secondAttribute="top" id="mDj-e9-ZFk"/>
+                            <constraint firstItem="aIR-PX-vwp" firstAttribute="bottom" secondItem="yWb-zo-bh1" secondAttribute="bottom" constant="10" id="tSU-VM-4wQ"/>
                             <constraint firstItem="2Vb-Nu-UEo" firstAttribute="trailing" secondItem="aIR-PX-vwp" secondAttribute="trailing" id="tl4-fz-kuV"/>
                             <constraint firstItem="2Vb-Nu-UEo" firstAttribute="bottom" secondItem="aIR-PX-vwp" secondAttribute="bottom" id="w3t-Jk-lAP"/>
                         </constraints>
@@ -33,6 +43,8 @@
                     <tabBarItem key="tabBarItem" title="Item 2" id="h0c-tb-LqL"/>
                     <connections>
                         <outlet property="detailsTable" destination="2Vb-Nu-UEo" id="K1O-hg-Dpj"/>
+                        <outlet property="playerView" destination="yWb-zo-bh1" id="FgT-rg-Lkq"/>
+                        <outlet property="playerViewHeight" destination="ImG-Q2-pbX" id="HZn-h6-KPw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eia-Jn-a7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

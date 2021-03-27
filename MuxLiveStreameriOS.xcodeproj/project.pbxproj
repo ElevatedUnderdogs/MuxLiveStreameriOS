@@ -39,6 +39,8 @@
 		75E651CF260D653D00B89B8D /* LoremsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651CE260D653D00B89B8D /* LoremsDataSource.swift */; };
 		75E651D4260D661500B89B8D /* HeaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651D3260D661500B89B8D /* HeaderDelegate.swift */; };
 		75E651E2260D780200B89B8D /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651E1260D780200B89B8D /* URLRequest.swift */; };
+		75E651FF260EAD3700B89B8D /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E651FE260EAD3700B89B8D /* PlayerView.swift */; };
+		75E65207260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E65206260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		75E651CE260D653D00B89B8D /* LoremsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremsDataSource.swift; sourceTree = "<group>"; };
 		75E651D3260D661500B89B8D /* HeaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDelegate.swift; sourceTree = "<group>"; };
 		75E651E1260D780200B89B8D /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		75E651FE260EAD3700B89B8D /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		75E65206260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.NSLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +166,9 @@
 				75E651A1260D04FC00B89B8D /* AVPlayerViewController.swift */,
 				753D52AB260AC80500C46053 /* NSObject.swift */,
 				75E651B9260D54E300B89B8D /* Numeric.swift */,
+				75E651FE260EAD3700B89B8D /* PlayerView.swift */,
 				7561031E26094C3A006EBF2B /* String.swift */,
+				75E65206260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift */,
 				75E651A9260D0EF100B89B8D /* UIAlertController.swift */,
 				75610319260830E9006EBF2B /* UIColor.swift */,
 				75E65192260BD1C900B89B8D /* UITabBarController.swift */,
@@ -373,12 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				753D52A7260AC7F600C46053 /* UIView.swift in Sources */,
+				75E65207260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift in Sources */,
 				755BF5A72606CB3200074D6A /* TabViewController.swift in Sources */,
 				7561031A260830E9006EBF2B /* UIColor.swift in Sources */,
 				75E651BA260D54E300B89B8D /* Numeric.swift in Sources */,
 				75E65198260D043A00B89B8D /* UIViewController.swift in Sources */,
 				75E651AA260D0EF100B89B8D /* UIAlertController.swift in Sources */,
 				75E651CF260D653D00B89B8D /* LoremsDataSource.swift in Sources */,
+				75E651FF260EAD3700B89B8D /* PlayerView.swift in Sources */,
 				755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */,
 				756103152607B86D006EBF2B /* UITabBarItem.swift in Sources */,
 				755BF5A52606CB3200074D6A /* SceneDelegate.swift in Sources */,
