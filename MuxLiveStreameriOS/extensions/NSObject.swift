@@ -9,5 +9,4 @@ import Foundation
 
 extension NSObject {
     var bundle: Bundle { .init(for: type(of: self)) }
-    var nibName: String { String(describing: type(of: self)) }
 }

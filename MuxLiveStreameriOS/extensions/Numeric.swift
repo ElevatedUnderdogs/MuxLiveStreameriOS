@@ -9,7 +9,11 @@ import UIKit
 
 extension Numeric {
 
-    mutating func setAsProportionateHeight(width: Self, rectHeight: Self, rectWidth: Self) where Self: FloatingPoint {
+    mutating func setAsProportionateHeight(
+        width: Self,
+        rectHeight: Self,
+        rectWidth: Self
+    ) where Self: FloatingPoint {
         self = (width * rectHeight) / rectWidth
     }
 }

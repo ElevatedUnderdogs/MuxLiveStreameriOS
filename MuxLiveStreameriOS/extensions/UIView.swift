@@ -11,7 +11,7 @@ import AVKit
 extension UIView {
 
     func add(playerLayer: AVPlayerLayer) {
-        playerLayer.frame = bounds
+        playerLayer.bounds = bounds
         layer.addSublayer(playerLayer)
     }
 
@@ -23,4 +23,6 @@ extension UIView {
             bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ]
     }
+
+    var nibName: String { String(describing: type(of: self)) }
 }

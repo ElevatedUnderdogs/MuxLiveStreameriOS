@@ -5,7 +5,6 @@
 //  Created by Scott Lydon on 3/20/21.
 //
 
-import UIKit
 import AVKit
 
 class TabViewController: UITabBarController {
@@ -17,10 +16,14 @@ class TabViewController: UITabBarController {
         tabBar.items?.setTextOnlyAttributes(fontSize: 20, color: .white)
         tabBar.barTintColor = .black
         tabBar.items?[1].title = "SCREEN2"
-        delegate = currentViewController as? UITabBarControllerDelegate
+        updateDelegate()
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        updateDelegate()
+    }
+
+    func updateDelegate() {
         delegate = currentViewController as? UITabBarControllerDelegate
     }
 }
