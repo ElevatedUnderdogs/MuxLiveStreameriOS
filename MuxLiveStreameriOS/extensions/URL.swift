@@ -10,10 +10,8 @@ import Foundation
 extension URL {
 
     static func muxStream(
-        id: String = .currentAssetID
+        id: String = .playBackID
     ) -> URL {
         URL(string: "https://stream.mux.com/"+id+".m3u8")!
     }
-
-    
 }
