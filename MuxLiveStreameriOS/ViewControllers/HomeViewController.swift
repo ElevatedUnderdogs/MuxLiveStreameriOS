@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var streamBackdrop: UIView!
     @IBOutlet var contentTable: UITableView!
     @IBOutlet var streamBackdropHeight: NSLayoutConstraint!
+    @IBOutlet var spinner: UIActivityIndicatorView!
     var avPlayer: AVPlayer!
 
     var statusObserver: NSKeyValueObservation?
@@ -59,6 +60,8 @@ extension HomeViewController {
             options: [.new, .old]
         ) { player, change in
             if player.timeControlStatus == .playing {
+                self.spinner?.stopAnimating()
+                self.spinner = nil
                 print(playerLayer.videoGravity.rawValue)
                 self.streamBackdrop.add(playerLayer: playerLayer)
                 self.streamBackdropHeight.constant.setAsProportionateHeight(
