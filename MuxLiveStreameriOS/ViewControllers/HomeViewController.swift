@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     var playingObserver: NSKeyValueObservation?
     var loremsDataSource: LoremsDataSource = LoremsDataSource(count: 4)
     var headerDelegate: HeaderDelegate = HeaderDelegate(title: "Sample Title")
-    var asset: AVAsset!
+   // var asset: AVAsset!
     var playerLayer: AVPlayerLayer!
 
     override func viewDidLoad() {
@@ -35,8 +35,8 @@ class HomeViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.asset = AVAsset(url: .muxStream())
-        let avItem = AVPlayerItem(asset: self.asset)
+       // self.asset = AVAsset(url: .muxStream())
+        let avItem = AVPlayerItem(url: .muxStream())//AVPlayerItem(asset: self.asset)
         self.avPlayer = AVPlayer(playerItem: avItem)
         self.playerLayer = AVPlayerLayer(player: avPlayer)
         avPlayer.play()
