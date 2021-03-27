@@ -65,7 +65,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-qL-B0h">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-qL-B0h">
                                 <rect key="frame" x="0.0" y="118" width="414" height="260"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Video Stream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gE-2o-QYi">
@@ -113,7 +113,6 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="nX0-7G-pwS"/>
                     <connections>
                         <outlet property="contentTable" destination="XV8-GI-6qX" id="gvT-OI-Js8"/>
-                        <outlet property="homeLabel" destination="Lqc-GT-1Ms" id="dAD-z4-rSA"/>
                         <outlet property="spinner" destination="SSN-Tc-UoY" id="0s0-qb-9gV"/>
                         <outlet property="streamBackdrop" destination="Lxu-qL-B0h" id="B5h-bB-VZE"/>
                         <outlet property="streamBackdropHeight" destination="b3V-oz-i5j" id="cdC-IW-IIp"/>

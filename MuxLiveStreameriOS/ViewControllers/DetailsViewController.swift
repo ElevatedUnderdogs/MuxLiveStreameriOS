@@ -11,7 +11,6 @@ import AVKit
 class DetailsViewController: UIViewController {
     
     @IBOutlet var detailsTable: UITableView!
-    var lorems: [String] = .init(repeating: .lorem, count: 10)
     var loremsDataSource: LoremsDataSource = LoremsDataSource(count: 10)
     var headerDelegate: HeaderDelegate = HeaderDelegate(title: "Screen 2")
 
@@ -30,23 +29,16 @@ class DetailsViewController: UIViewController {
         detailsTable.separatorStyle = .none
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // playerViewHeight.constant = playerView.frame.width * size.height / size.width
-    }
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-         playerViewHeight.constant = playerView.frame.width * size.height / size.width
+        playerViewHeight.constant = playerView.frame.width * size.height / size.width
     }
 }
-
 
 extension DetailsViewController: UITabBarControllerDelegate {
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        guard let next = viewController as? HomeViewController else { return }
-        // next.streamBackdrop = streamBackdrop
-        next.avPlayer = avPlayer
+        let next = viewController as? HomeViewController
+        next?.avPlayer = avPlayer
     }
 }
