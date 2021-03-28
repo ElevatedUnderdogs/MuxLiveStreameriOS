@@ -128,16 +128,11 @@ extension UIViewController {
     }
 
     private func hideNoInternetBanner() {
-        let banner = view.viewWithTag(Self.bannerID)
-        let heightConstraint = banner?.constraints.first { $0.identifier == Self.identifier }
-        heightConstraint?.constant = 0
-        UIView.animate(withDuration: 1) { [weak self] in
-            guard let `self` = self, let banner = self.view.viewWithTag(Self.bannerID) else { return }
-            banner.isHidden = true
-            banner.layoutIfNeeded()
-        } completion: { _ in
-
+        view.viewWithTag(Self.bannerID)?.alpha = 0
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.view.layoutIfNeeded()
+        } completion: { [weak self] _ in
+            self?.view.viewWithTag(Self.bannerID)?.removeFromSuperview()
         }
-
     }
 }
