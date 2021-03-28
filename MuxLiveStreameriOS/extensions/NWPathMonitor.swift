@@ -13,7 +13,7 @@ extension NWPathMonitor {
     /// To prove the issue, connect, disconnect, then connect again, the value of connectivity will be disconnected
     ///  After a slight delay the connectivity provides the correct value.
     /// - Parameter connectionChanged: Passes a boolean value indicating when connected. true means connected.
-    func monitorConnected(
+    func connectivity(
         connectionChanged: @escaping (Bool) -> Void
     ) {
         pathUpdateHandler = { path in

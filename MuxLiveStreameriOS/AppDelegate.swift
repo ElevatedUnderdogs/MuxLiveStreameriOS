@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        monitor.monitorConnected { connected in
+        monitor.connectivity { connected in
             UIApplication.topMostViewController?.handleInternetBanner(connected: connected)
         }
         AVAudioSession.set()
@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension UIScene {
+
     var asWindowScene: UIWindowScene? {
         self as? UIWindowScene
     }
@@ -64,6 +65,7 @@ extension UIApplication {
 }
 
 extension UIView {
+
     var nextAsViewController: UIViewController? {
         next as? UIViewController
     }
@@ -109,15 +111,16 @@ extension UIViewController {
             bottomConstraint,
         ].activate()
         banner.backgroundColor = noInternetBannerColor
+        banner.tag = Self.bannerID
 
-//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-//        banner.addSubview(label)
-//        [
-//            label.centerXAnchor.constraint(equalTo: banner.centerXAnchor),
-//            label.bottomAnchor.constraint(equalTo: banner.bottomAnchor, constant: 5),
-//            label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
-//        ].activate()
-//        label.text = "No internet"
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 0))
+        banner.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        [
+            label.centerXAnchor.constraint(equalTo: banner.centerXAnchor),
+            label.bottomAnchor.constraint(equalTo: banner.bottomAnchor, constant: -2),
+        ].activate()
+        label.text = "No internet"
 
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
@@ -128,6 +131,13 @@ extension UIViewController {
         let banner = view.viewWithTag(Self.bannerID)
         let heightConstraint = banner?.constraints.first { $0.identifier == Self.identifier }
         heightConstraint?.constant = 0
+        UIView.animate(withDuration: 1) { [weak self] in
+            guard let `self` = self, let banner = self.view.viewWithTag(Self.bannerID) else { return }
+            banner.isHidden = true
+            banner.layoutIfNeeded()
+        } completion: { _ in
+
+        }
 
     }
 }
