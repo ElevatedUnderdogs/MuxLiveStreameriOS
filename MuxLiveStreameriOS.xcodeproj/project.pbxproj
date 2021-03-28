@@ -18,6 +18,8 @@
 		753D52AC260AC80500C46053 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753D52AB260AC80500C46053 /* NSObject.swift */; };
 		7542B4EB261106BC005C4BED /* AVAudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542B4EA261106BC005C4BED /* AVAudioSession.swift */; };
 		7542B4F0261106EF005C4BED /* NWPathMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542B4EF261106EF005C4BED /* NWPathMonitor.swift */; };
+		7542B4F826114791005C4BED /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542B4F726114791005C4BED /* UIApplication.swift */; };
+		7542B4FD261147B8005C4BED /* UIScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542B4FC261147B8005C4BED /* UIScene.swift */; };
 		755BF5A32606CB3200074D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A22606CB3200074D6A /* AppDelegate.swift */; };
 		755BF5A52606CB3200074D6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A42606CB3200074D6A /* SceneDelegate.swift */; };
 		755BF5A72606CB3200074D6A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755BF5A62606CB3200074D6A /* TabViewController.swift */; };
@@ -87,6 +89,8 @@
 		753D52AB260AC80500C46053 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		7542B4EA261106BC005C4BED /* AVAudioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioSession.swift; sourceTree = "<group>"; };
 		7542B4EF261106EF005C4BED /* NWPathMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWPathMonitor.swift; sourceTree = "<group>"; };
+		7542B4F726114791005C4BED /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		7542B4FC261147B8005C4BED /* UIScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScene.swift; sourceTree = "<group>"; };
 		755BF59F2606CB3200074D6A /* MuxLiveStreameriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuxLiveStreameriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		755BF5A22606CB3200074D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		755BF5A42606CB3200074D6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,7 +206,9 @@
 				7561031E26094C3A006EBF2B /* String.swift */,
 				75E65206260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift */,
 				75E6529E260FBD2A00B89B8D /* socketaddr_in.swift */,
+				7542B4F726114791005C4BED /* UIApplication.swift */,
 				75610319260830E9006EBF2B /* UIColor.swift */,
+				7542B4FC261147B8005C4BED /* UIScene.swift */,
 				75E65192260BD1C900B89B8D /* UITabBarController.swift */,
 				753D52A6260AC7F600C46053 /* UIView.swift */,
 				75E65197260D043A00B89B8D /* UIViewController.swift */,
@@ -427,6 +433,7 @@
 				753D52A7260AC7F600C46053 /* UIView.swift in Sources */,
 				75E65207260EB54D00B89B8D /* Sequence.NSLayoutConstraint.swift in Sources */,
 				755BF5A72606CB3200074D6A /* TabViewController.swift in Sources */,
+				7542B4FD261147B8005C4BED /* UIScene.swift in Sources */,
 				7561031A260830E9006EBF2B /* UIColor.swift in Sources */,
 				75E651BA260D54E300B89B8D /* Numeric.swift in Sources */,
 				75E65198260D043A00B89B8D /* UIViewController.swift in Sources */,
@@ -441,6 +448,7 @@
 				75E6519D260D04A300B89B8D /* AVPlayer.swift in Sources */,
 				755BF5D626079D9900074D6A /* HomeViewController.swift in Sources */,
 				7542B4EB261106BC005C4BED /* AVAudioSession.swift in Sources */,
+				7542B4F826114791005C4BED /* UIApplication.swift in Sources */,
 				752CA2FE260A681D00D558E0 /* UITableView.swift in Sources */,
 				7561031F26094C3A006EBF2B /* String.swift in Sources */,
 				752CA303260A684B00D558E0 /* UITableViewCell.swift in Sources */,
