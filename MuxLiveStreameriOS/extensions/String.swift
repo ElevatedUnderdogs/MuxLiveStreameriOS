@@ -24,4 +24,12 @@ extension String {
     static var playBackID: String {
         "iCi02DOeHDvWfRAoLmeNmqPiBq6lrXEm02Q84R3vzXtMA"
     }
+
+    static var alphaNumeric: String {
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    }
+
+    static func random(length: Int) -> String {
+        String((0..<length).compactMap { _ in String.alphaNumeric.randomElement() })
+    }
 }

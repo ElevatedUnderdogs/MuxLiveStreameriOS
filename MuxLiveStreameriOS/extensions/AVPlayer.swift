@@ -24,7 +24,7 @@ extension AVPlayer {
     func remindOfMux24HourLimit() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             guard sockaddr_in.isConnectedToNetwork else { return }
-            assert(self.hasVideo, .muxNoVideoMessage)
+           //  assert(self.hasVideo, .muxNoVideoMessage)
         }
     }
 }
