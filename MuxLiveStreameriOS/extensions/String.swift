@@ -18,11 +18,11 @@ extension String {
     }
 
     static var currentAssetID: String {
-        "1siWodLF1k13XzNPHRc02TuwaiYezPG689PE3mNPOlOA"
+        "nt8ZixDunp3tWVzKsCFvfhsYYb4W1i7TmXzTbHpk02k00"
     }
 
     static var playBackID: String {
-        "iCi02DOeHDvWfRAoLmeNmqPiBq6lrXEm02Q84R3vzXtMA"
+        "5u7A59S2dXkcgiv2VAmeyUGmANrvmvDIQJTW007b8ROg"
     }
 
     static var alphaNumeric: String {
