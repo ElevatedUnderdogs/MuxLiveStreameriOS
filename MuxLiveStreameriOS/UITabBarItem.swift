@@ -12,7 +12,7 @@ extension UITabBarItem {
     func setTextOnlyAttributes(fontSize: CGFloat, color: UIColor = .black) {
         image = nil
         selectedImage = nil
-        titlePositionAdjustment = UIOffset(horizontal:0, vertical:-10)
+        titlePositionAdjustment = UIOffset(horizontal:0, vertical: -10)
         setTitleTextAttributes(
             [
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize),

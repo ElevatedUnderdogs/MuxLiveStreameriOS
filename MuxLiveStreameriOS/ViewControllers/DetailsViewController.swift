@@ -31,6 +31,7 @@ class DetailsViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        guard size.width > 0 else { return }
         playerViewHeight.constant = playerView.frame.width * size.height / size.width
     }
 }
@@ -38,7 +39,6 @@ class DetailsViewController: UIViewController {
 extension DetailsViewController: UITabBarControllerDelegate {
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let next = viewController as? HomeViewController
-        next?.avPlayer = avPlayer
+        (viewController as? HomeViewController)?.avPlayer = avPlayer
     }
 }

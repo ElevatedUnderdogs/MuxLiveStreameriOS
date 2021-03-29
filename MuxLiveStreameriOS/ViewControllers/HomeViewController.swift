@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     var playingObserver: NSKeyValueObservation?
     var loremsDataSource: LoremsDataSource = LoremsDataSource(count: 4)
     var headerDelegate: HeaderDelegate = HeaderDelegate(title: "Sample Title")
-   // var asset: AVAsset!
     var playerLayer: AVPlayerLayer!
 
     override func viewDidLoad() {
@@ -35,10 +34,8 @@ class HomeViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-       // self.asset = AVAsset(url: .muxStream())
-        let avItem = AVPlayerItem(url: .muxStream())//AVPlayerItem(asset: self.asset)
-        self.avPlayer = AVPlayer(playerItem: avItem)
-        self.playerLayer = AVPlayerLayer(player: avPlayer)
+        avPlayer = AVPlayer(url: .muxStream())
+        playerLayer = AVPlayerLayer(player: avPlayer)
         avPlayer.play()
         updateStreamViewHeight(playerLayer)
         avPlayer.remindOfMux24HourLimit()
@@ -52,20 +49,24 @@ extension HomeViewController {
             \.timeControlStatus,
             options: [.new, .old]
         ) { [weak self] player, change in
-            guard player.timeControlStatus == .playing, let `self` = self else { return }
+            guard player.timeControlStatus == .playing else { return }
             DispatchQueue.main.async {
-                self.spinner?.stopAnimating()
-                self.spinner = nil
-                self.streamBackdrop.add(playerLayer: playerLayer)
-                self.streamBackdropHeight.constant.setAsProportionateHeight(
-                    width: self.streamBackdrop.frame.width,
-                    rectHeight: playerLayer.videoRect.height,
-                    rectWidth: playerLayer.videoRect.width
-                )
-                self.streamBackdrop.layer.sublayers = []
-                self.streamBackdrop.add(playerLayer: playerLayer)
+                self?.addPlayerLayer()
             }
         }
+    }
+
+    private func addPlayerLayer() {
+        spinner?.stopAnimating()
+        spinner = nil
+        streamBackdrop.add(playerLayer: playerLayer)
+        streamBackdropHeight.constant.setAsProportionateHeight(
+            width: streamBackdrop.frame.width,
+            rectHeight: playerLayer.videoRect.height,
+            rectWidth: playerLayer.videoRect.width
+        )
+        streamBackdrop.layer.sublayers = []
+        streamBackdrop.add(playerLayer: playerLayer)
     }
 }
 

@@ -19,7 +19,6 @@ extension UIViewController {
     }
 }
 
-
 // MARK: no Internet methods
 extension UIViewController {
 

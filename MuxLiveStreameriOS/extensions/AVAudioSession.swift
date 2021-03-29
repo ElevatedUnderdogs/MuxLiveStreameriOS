@@ -11,9 +11,8 @@ import AVFoundation
 extension AVAudioSession {
 
     class func set(category: AVAudioSession.Category = .playback) {
-        let audioSession = AVAudioSession.sharedInstance()
         do {
-            try audioSession.setCategory(category)
+            try AVAudioSession.sharedInstance().setCategory(category)
         } catch {
             print("Audio session failed", error)
         }
