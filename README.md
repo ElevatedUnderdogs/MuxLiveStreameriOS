@@ -113,7 +113,7 @@ Letting the Streaming player keep its same view allows us to avoid the problem o
 - [x] [fix crash when clicking the stream](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/9)
 - [x] [Create Launch Screen](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/13)
 - [x] [Create app icon](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/14)
-- [ ] No internet handling
+- [x] [No internet handling](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/15)
 - [ ] loop the stream
 - [ ] verification with multiple different videos that have visually distinct parts to confirm the whole video is being played properly, and that the current video location is the same when transitioning controller views. 
 - [ ] Experiment with custom TabController so that view can animate to the bottom. 
