@@ -118,6 +118,6 @@ Letting the Streaming player keep its same view allows us to avoid the problem o
 - [ ] verification with multiple different videos that have visually distinct parts to confirm the whole video is being played properly, and that the current video location is the same when transitioning controller views. 
 - [ ] Experiment with custom TabController so that view can animate to the bottom. 
 - [ ] Experiment with project just to use PictureInPictureController and make that work. 
-- [ ] Recode with SwiftUI and Combine.
+- [ ] Recode with SwiftUI and Combine or MVVM.
 - [ ] Extract the parts reused from other projects into Swift Packages. URL, Color components. 
 - [ ] Experiment with passing `PlayerView` across `ViewControllers`, `Player`, `PlayerLayer` Along with a Publisher subscriber architecture in case the video changes dynamically. 
