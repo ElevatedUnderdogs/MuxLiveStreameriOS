@@ -26,3 +26,11 @@ extension UIView {
 
     var nibName: String { String(describing: type(of: self)) }
 }
+
+// MARK: no Internet methods
+extension UIView {
+
+    var nextAsViewController: UIViewController? {
+        next as? UIViewController
+    }
+}

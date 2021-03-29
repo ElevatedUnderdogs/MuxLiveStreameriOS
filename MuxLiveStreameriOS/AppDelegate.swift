@@ -7,22 +7,22 @@
 
 import UIKit
 import AVFoundation
+import Network
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    let monitor = NWPathMonitor()
 
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         .portrait
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            try audioSession.setCategory(AVAudioSession.Category.playback)
-        } catch {
-            print("Audio session failed", error)
+        monitor.connectivity { connected in
+            UIApplication.topMostViewController?.handleInternetBanner(connected: connected)
         }
+        AVAudioSession.set()
         return true
     }
 }
-
