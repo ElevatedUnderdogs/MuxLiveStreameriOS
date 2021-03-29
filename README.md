@@ -104,4 +104,17 @@ Letting the Streaming player keep its same view allows us to avoid the problem o
   - Or instead of using a Tab Bar, a navigation controller could be used. 
   - Or the view cna be passed as a payload to the other tab View.  We can simulate the movement, by capturing the frame and animating it up and down. 
 
-
+**To Do:**
+- [x] [tests @77% coverage](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/11)
+- [x] [Add loading spinner](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/10)
+- [x] [fix crash when clicking the stream](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/9)
+- [x] [Create Launch Screen](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/13)
+- [x] [Create app icon](https://github.com/ElevatedUnderdogs/MuxLiveStreameriOS/pull/14)
+- [ ] No internet handling
+- [ ] loop the stream
+- [ ] verification with multiple different videos that have visually distinct parts to confirm the whole video is being played properly, and that the current video location is the same when transitioning controller views. 
+- [ ] Experiment with custom TabController so that view can animate to the bottom. 
+- [ ] Experiment with project just to use PictureInPictureController and make that work. 
+- [ ] Recode with SwiftUI and Combine.
+- [ ] Extract the parts reused from other projects into Swift Packages. URL, Color components. 
+- [ ] Experiment with passing `PlayerView` across `ViewControllers`, `Player`, `PlayerLayer` Along with a Publisher subscriber architecture in case the video changes dynamically. 
