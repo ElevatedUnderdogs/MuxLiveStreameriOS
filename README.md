@@ -1,3 +1,6 @@
+![MVPComplete](https://user-images.githubusercontent.com/4231144/112772983-d0036480-8fe8-11eb-9521-c7c5f1f99153.gif)
+
+
 # MuxLiveStreameriOS
 A live streaming app for the Stonks iOS interview
 
