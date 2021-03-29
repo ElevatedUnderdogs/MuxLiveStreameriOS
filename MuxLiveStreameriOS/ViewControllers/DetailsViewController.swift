@@ -31,6 +31,7 @@ class DetailsViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        guard size.width > 0 else { return }
         playerViewHeight.constant = playerView.frame.width * size.height / size.width
     }
 }

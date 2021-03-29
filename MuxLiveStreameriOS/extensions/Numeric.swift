@@ -14,6 +14,7 @@ extension Numeric {
         rectHeight: Self,
         rectWidth: Self
     ) where Self: FloatingPoint {
+        guard rectWidth > 0 else { return }
         self = (width * rectHeight) / rectWidth
     }
 }
