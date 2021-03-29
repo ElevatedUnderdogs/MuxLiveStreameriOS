@@ -36,7 +36,11 @@ extension UIViewController {
         .random(in: 100...Int.max)
     }()
 
-    private static var identifier: String = {
+    private static var hideIdentifier: String = {
+        .random(length: 20)
+    }()
+
+    private static var showIdentifier: String = {
         .random(length: 20)
     }()
 
@@ -48,41 +52,72 @@ extension UIViewController {
         connected ? hideNoInternetBanner() : showNoInternetBanner()
     }
 
+    fileprivate func constraints(banner: UIView, other view: UIView) -> [NSLayoutConstraint] {
+        [
+            banner.rightAnchor.constraint(equalTo: view.rightAnchor),
+            banner.topAnchor.constraint(equalTo: view.topAnchor),
+            banner.leftAnchor.constraint(equalTo: view.leftAnchor),
+        ]
+    }
+
+    fileprivate func constraints(label: UIView, banner: UIView) -> [NSLayoutConstraint] {
+        [
+            label.leftAnchor.constraint(equalTo: banner.leftAnchor),
+            label.rightAnchor.constraint(equalTo: banner.rightAnchor),
+            label.bottomAnchor.constraint(equalTo: banner.bottomAnchor, constant: -10),
+        ]
+    }
+
+    @discardableResult
+    fileprivate func hideConstraint(superView: UIView, banner: UIView, id: String = hideIdentifier) -> NSLayoutConstraint {
+        let constraint = superView.topAnchor.constraint(equalTo: banner.bottomAnchor)
+        constraint.identifier = id
+        constraint.isActive = false
+        constraint.priority = .required
+        return constraint
+    }
+
+    @discardableResult
+    fileprivate func showConstraint(label: UIView, banner: UIView, id: String = showIdentifier) -> NSLayoutConstraint {
+        let constraint = label.topAnchor.constraint(equalTo: banner.safeAreaLayoutGuide.topAnchor, constant: -5)
+        constraint.identifier = id
+        constraint.isActive = false
+        constraint.priority = .required
+        return constraint
+    }
+
     private func showNoInternetBanner() {
         let banner = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 0))
         banner.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(banner)
 
-        let bottomConstraint = banner.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10)
-        [
-            banner.rightAnchor.constraint(equalTo: view.rightAnchor),
-            banner.topAnchor.constraint(equalTo: view.topAnchor),
-            banner.leftAnchor.constraint(equalTo: view.leftAnchor),
-            bottomConstraint,
-        ].activate()
+        let bannerConstraints = constraints(banner: banner, other: view)
+        bannerConstraints.activate()
         banner.backgroundColor = noInternetBannerColor
         banner.tag = Self.bannerID
+        hideConstraint(superView: view, banner: banner)
 
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 0))
         banner.addSubview(label)
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
-        [
-            label.centerXAnchor.constraint(equalTo: banner.centerXAnchor),
-            label.bottomAnchor.constraint(equalTo: banner.bottomAnchor, constant: -2),
-        ].activate()
+        let labelConstraints = constraints(label: label, banner: banner) + [showConstraint(label: label, banner: banner)]
+        labelConstraints.activate()
         label.text = "No internet"
 
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
     }
 
     private func hideNoInternetBanner() {
-        view.viewWithTag(Self.bannerID)?.alpha = 0
-        UIView.animate(withDuration: 0.5) { [weak self] in
+        let banner = view.viewWithTag(Self.bannerID)
+        banner?.constraints.first { $0.identifier == Self.hideIdentifier }?.isActive = true
+        banner?.constraints.first { $0.identifier == Self.showIdentifier }?.isActive = false
+        UIView.animate(withDuration: 0.3) { [weak self] in
             self?.view.layoutIfNeeded()
-        } completion: { [weak self] _ in
-            self?.view.viewWithTag(Self.bannerID)?.removeFromSuperview()
+        } completion: { _ in
+            banner?.removeFromSuperview()
         }
     }
 }
