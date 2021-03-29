@@ -15,9 +15,9 @@ extension AVPlayer {
     }
 
     var hasVideo: Bool {
-        self.currentItem?
+        currentItem?
             .tracks
-            .filter({$0.assetTrack?.mediaType == AVMediaType.video})
+            .filter {$0.assetTrack?.mediaType == AVMediaType.video } 
             .count != 0
     }
 

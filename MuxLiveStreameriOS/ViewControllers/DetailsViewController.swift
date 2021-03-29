@@ -39,7 +39,6 @@ class DetailsViewController: UIViewController {
 extension DetailsViewController: UITabBarControllerDelegate {
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let next = viewController as? HomeViewController
-        next?.avPlayer = avPlayer
+        (viewController as? HomeViewController)?.avPlayer = avPlayer
     }
 }

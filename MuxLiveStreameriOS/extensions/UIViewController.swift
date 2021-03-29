@@ -20,6 +20,18 @@ extension UIViewController {
 }
 
 
+class TopBannerModel {
+    var shared = TopBannerModel()
+    var payload: Payload! 
+    private init() {}
+
+    struct Payload {
+        var backgroundColor: UIColor
+        var textColor: UIColor
+    }
+}
+
+
 // MARK: no Internet methods
 extension UIViewController {
 
